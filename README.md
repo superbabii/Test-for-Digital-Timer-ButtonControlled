@@ -5,9 +5,9 @@ This repository contains a test project for a button-controlled digital clock us
 ## Features
 
 - **Time Adjustment**: 
-  - **+ Button (RA0)**: Increases time by minutes.
-  - **- Button (RA1)**: Decreases time by minutes.
-  - **Reset Button (RA2)**: Resets time to 00:00.
+  - **S1 Button (RA0)**: Increases time by minutes.
+  - **S2 Button (RA1)**: Decreases time by minutes.
+  - **S3 Button (RA2)**: Resets time to 00:00.
 
 - **Timer0-Based Timekeeping**: 
   - The time is incremented every second using a Timer0 overflow interrupt.
