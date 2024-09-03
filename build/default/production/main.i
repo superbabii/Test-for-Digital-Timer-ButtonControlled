@@ -3125,9 +3125,11 @@ void SYSTEM_Initialize(void);
 
 
 
+
 unsigned char seconds = 0;
 unsigned char minutes = 0;
 unsigned char digit[4];
+_Bool timer_running = 0;
 
 
 
@@ -3147,15 +3149,19 @@ void Timer0_OverflowCallback(void) {
 
     Timer0_Write(120);
 
-    ms_count++;
-    if (ms_count >= 1000) {
-        ms_count = 0;
-        seconds++;
-        if (seconds >= 60) {
-            seconds = 0;
-            minutes++;
-            if (minutes >= 60) {
-                minutes = 0;
+    if (timer_running) {
+        ms_count++;
+        if (ms_count >= 1000) {
+            ms_count = 0;
+            if (seconds == 0) {
+                if (minutes == 0) {
+                    timer_running = 0;
+                } else {
+                    minutes--;
+                    seconds = 59;
+                }
+            } else {
+                seconds--;
             }
         }
     }
@@ -3163,7 +3169,7 @@ void Timer0_OverflowCallback(void) {
 
 
 void handle_buttons(void) {
-    if (PORTAbits.RA0 == 0) {
+    if (PORTAbits.RA0 == 0 && !timer_running) {
         _delay((unsigned long)((20)*(20000000/4000.0)));
         if (PORTAbits.RA0 == 0) {
             minutes++;
@@ -3174,7 +3180,7 @@ void handle_buttons(void) {
         }
     }
 
-    if (PORTAbits.RA1 == 0) {
+    if (PORTAbits.RA1 == 0 && !timer_running) {
         _delay((unsigned long)((20)*(20000000/4000.0)));
         if (PORTAbits.RA1 == 0) {
             if (minutes == 0) {
@@ -3188,9 +3194,8 @@ void handle_buttons(void) {
 
     if (PORTAbits.RA2 == 0) {
         _delay((unsigned long)((20)*(20000000/4000.0)));
-        if (PORTAbits.RA2 == 0) {
-            minutes = 0;
-            seconds = 0;
+        if (PORTAbits.RA2 == 0 && !timer_running) {
+            timer_running = 1;
             while (PORTAbits.RA2 == 0);
         }
     }

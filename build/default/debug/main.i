@@ -3124,9 +3124,12 @@ void SYSTEM_Initialize(void);
 # 35 "main.c" 2
 
 
+
+
 unsigned char seconds = 0;
 unsigned char minutes = 0;
 unsigned char digit[4];
+_Bool timer_running = 0;
 
 
 
@@ -3140,11 +3143,69 @@ void update_display() {
 }
 
 
+void Timer0_OverflowCallback(void) {
+    static unsigned int ms_count = 0;
+
+
+    Timer0_Write(120);
+
+    if (timer_running) {
+        ms_count++;
+        if (ms_count >= 1000) {
+            ms_count = 0;
+            if (seconds == 0) {
+                if (minutes == 0) {
+                    timer_running = 0;
+                } else {
+                    minutes--;
+                    seconds = 59;
+                }
+            } else {
+                seconds--;
+            }
+        }
+    }
+}
+
+
+void handle_buttons(void) {
+    if (PORTAbits.RA0 == 0 && !timer_running) {
+        _delay((unsigned long)((20)*(20000000/4000.0)));
+        if (PORTAbits.RA0 == 0) {
+            minutes++;
+            if (minutes >= 60) {
+                minutes = 0;
+            }
+            while (PORTAbits.RA0 == 0);
+        }
+    }
+
+    if (PORTAbits.RA1 == 0 && !timer_running) {
+        _delay((unsigned long)((20)*(20000000/4000.0)));
+        if (PORTAbits.RA1 == 0) {
+            if (minutes == 0) {
+                minutes = 59;
+            } else {
+                minutes--;
+            }
+            while (PORTAbits.RA1 == 0);
+        }
+    }
+
+    if (PORTAbits.RA2 == 0) {
+        _delay((unsigned long)((20)*(20000000/4000.0)));
+        if (PORTAbits.RA2 == 0 && !timer_running) {
+            timer_running = 1;
+            while (PORTAbits.RA2 == 0);
+        }
+    }
+}
 
 
 
-int main(void)
-{
+
+
+int main(void) {
     SYSTEM_Initialize();
 
 
@@ -3154,12 +3215,14 @@ int main(void)
     (INTCONbits.PEIE = 1);
 
 
-    TMR0 = 120;
+    Timer0_Write(120);
 
 
-    while(1)
-    {
+    Timer0_OverflowCallbackRegister(Timer0_OverflowCallback);
+
+    while(1) {
         update_display();
+        handle_buttons();
 
 
         LATBbits.LATB0 = 1; LATC = digit[0]; _delay((unsigned long)((1)*(20000000/4000.0))); LATBbits.LATB0 = 0;

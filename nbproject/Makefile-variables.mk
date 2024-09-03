@@ -6,5 +6,5 @@
 CND_BASEDIR=`pwd`
 # default configuration
 CND_ARTIFACT_DIR_default=dist/default/production
-CND_ARTIFACT_NAME_default=Test.X.production.hex
-CND_ARTIFACT_PATH_default=dist/default/production/Test.X.production.hex
+CND_ARTIFACT_NAME_default=Test-for-Digital-Timer-ButtonControlled.production.hex
+CND_ARTIFACT_PATH_default=dist/default/production/Test-for-Digital-Timer-ButtonControlled.production.hex

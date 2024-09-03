@@ -35,9 +35,11 @@
 #include "mcc_generated_files/system/system.h"
 #include "mcc_generated_files/timer/tmr0.h"
 
+// Variables for timekeeping
 unsigned char seconds = 0;
 unsigned char minutes = 0;
 unsigned char digit[4];
+bool timer_running = false;
 
 // Timer0 Preload Value for 1ms Timing
 #define TMR0_PRELOAD 120
@@ -57,15 +59,19 @@ void Timer0_OverflowCallback(void) {
     // Reload Timer0 to maintain 1ms interval
     Timer0_Write(TMR0_PRELOAD);
 
-    ms_count++;
-    if (ms_count >= 1000) { // 1 second
-        ms_count = 0;
-        seconds++;
-        if (seconds >= 60) {
-            seconds = 0;
-            minutes++;
-            if (minutes >= 60) {
-                minutes = 0;
+    if (timer_running) {
+        ms_count++;
+        if (ms_count >= 1000) { // 1 second
+            ms_count = 0;
+            if (seconds == 0) {
+                if (minutes == 0) {
+                    timer_running = false; // Stop the timer when it reaches 00:00
+                } else {
+                    minutes--;
+                    seconds = 59;
+                }
+            } else {
+                seconds--;
             }
         }
     }
@@ -73,7 +79,7 @@ void Timer0_OverflowCallback(void) {
 
 // Function to handle button presses
 void handle_buttons(void) {
-    if (PORTAbits.RA0 == 0) {  // + Button
+    if (PORTAbits.RA0 == 0 && !timer_running) {  // + Button
         __delay_ms(20); // Debounce delay
         if (PORTAbits.RA0 == 0) {
             minutes++;
@@ -84,7 +90,7 @@ void handle_buttons(void) {
         }
     }
 
-    if (PORTAbits.RA1 == 0) {  // - Button
+    if (PORTAbits.RA1 == 0 && !timer_running) {  // - Button
         __delay_ms(20); // Debounce delay
         if (PORTAbits.RA1 == 0) {
             if (minutes == 0) {
@@ -96,11 +102,10 @@ void handle_buttons(void) {
         }
     }
 
-    if (PORTAbits.RA2 == 0) {  // Reset Button
+    if (PORTAbits.RA2 == 0) {  // Start Button (S3)
         __delay_ms(20); // Debounce delay
-        if (PORTAbits.RA2 == 0) {
-            minutes = 0;
-            seconds = 0;
+        if (PORTAbits.RA2 == 0 && !timer_running) {
+            timer_running = true;
             while (PORTAbits.RA2 == 0); // Wait until the button is released
         }
     }

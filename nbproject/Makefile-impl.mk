@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Test.X
+PROJECTNAME=Test-for-Digital-Timer-ButtonControlled
 
 # Active Configuration
 DEFAULTCONF=default

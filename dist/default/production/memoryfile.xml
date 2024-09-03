@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production\Test.X.production.hex">
+  <executable name="dist/default/production\Test-for-Digital-Timer-ButtonControlled.production.hex">
     <memory name="program">
       <units>words</units>
       <length>16384</length>
-      <used>545</used>
-      <free>15839</free>
+      <used>561</used>
+      <free>15823</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>1024</length>
-      <used>27</used>
-      <free>997</free>
+      <used>28</used>
+      <free>996</free>
     </memory>
   </executable>
 </project>
