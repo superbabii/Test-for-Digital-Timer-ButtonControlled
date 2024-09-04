@@ -54,9 +54,6 @@ uint8_t seconds = 0;
 uint8_t digit[4];
 bool timer_running = false;
 
-// Timer0 Preload Value for 1ms Timing
-//#define TMR0_PRELOAD 120
-
 // Function to update the 7-segment display values
 void displayDigits(uint8_t minutes, uint8_t seconds) {
     uint8_t digit[4];
@@ -73,16 +70,12 @@ void displayDigits(uint8_t minutes, uint8_t seconds) {
     }
 }
 
-// Timer0 Overflow Callback Function
-void Timer0_OverflowCallback(void) {
+void decreaseTime(void) {
     static unsigned int ms_count = 0;
-
-//    // Reload Timer0 to maintain 1ms interval
-//    Timer0_Write(TMR0_PRELOAD);
 
     if (timer_running) {
         ms_count++;
-        if (ms_count >= 1000) { // 1 second
+        if (ms_count >= 123) { // 1 second
             ms_count = 0;
             if (seconds == 0) {
                 if (minutes == 0) {
@@ -111,12 +104,9 @@ int main(void) {
     // Enable the Peripheral Interrupts 
     INTERRUPT_PeripheralInterruptEnable(); 
 
-    // Register the Timer0 Overflow Callback function
-    Timer0_OverflowCallbackRegister(Timer0_OverflowCallback);
-
     while(1) {
         if (PORTAbits.RA0 == 0 && !timer_running) {  // + Button
-            __delay_ms(20); // Debounce delay
+            __delay_ms(100); // Debounce delay
             if (PORTAbits.RA0 == 0) {
                 minutes++;
                 if (minutes > 99) {
@@ -126,7 +116,7 @@ int main(void) {
         }
 
         if (PORTAbits.RA1 == 0 && !timer_running) {  // - Button
-            __delay_ms(20); // Debounce delay
+            __delay_ms(100); // Debounce delay
             if (PORTAbits.RA1 == 0) {
                 if (minutes > 0) {
                     minutes--;
@@ -135,13 +125,14 @@ int main(void) {
         }
 
         if (PORTAbits.RA2 == 0) {  // Start Button (S3)
-            __delay_ms(20); // Debounce delay
+            __delay_ms(100); // Debounce delay
             if (PORTAbits.RA2 == 0 && !timer_running) {
                 timer_running = true;
                 while (PORTAbits.RA2 == 0); // Wait until the button is released
             }
         }
         
+        decreaseTime();
         // Display the time
         displayDigits(minutes, seconds);
     }    

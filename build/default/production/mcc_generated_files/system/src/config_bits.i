@@ -8,14 +8,14 @@
 # 2 "<built-in>" 2
 # 1 "mcc_generated_files/system/src/config_bits.c" 2
 # 39 "mcc_generated_files/system/src/config_bits.c"
-#pragma config FOSC = HS
+#pragma config FOSC = INTOSC
 #pragma config WDTE = OFF
 #pragma config PWRTE = OFF
 #pragma config MCLRE = ON
 #pragma config CP = OFF
 #pragma config BOREN = ON
 #pragma config CLKOUTEN = OFF
-#pragma config IESO = ON
+#pragma config IESO = OFF
 #pragma config FCMEN = ON
 
 

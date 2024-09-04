@@ -3021,8 +3021,8 @@ void CLOCK_Initialize(void);
 
 void CLOCK_Initialize(void)
 {
-    OSCCON = (15 << 0x3)
-        | (0 << 0x0);
+    OSCCON = (13 << 0x3)
+        | (2 << 0x0);
     BORCON = (0 << 0x7)
         | (0 << 0x6);
 }

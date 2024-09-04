@@ -28,10 +28,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "374
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc\pic16f1518.h: 374: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
 [v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
-[v F1726 `(v ~T0 @X0 0 tf ]
-"98 ./mcc_generated_files/timer/tmr0.h
-[v _Timer0_OverflowCallbackRegister `(v ~T0 @X0 0 ef1`*F1726 ]
-"435 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc\pic16f1518.h
+"435
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc\pic16f1518.h: 435:     struct {
 [s S34 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S34 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 RA7 ]
@@ -413,31 +410,31 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _timer_running
 -> -> 0 `i `a
 ]
-"61
-[; ;main.c: 61: void displayDigits(uint8_t minutes, uint8_t seconds) {
+"58
+[; ;main.c: 58: void displayDigits(uint8_t minutes, uint8_t seconds) {
 [v _displayDigits `(v ~T0 @X0 1 ef2`uc`uc ]
 {
 [e :U _displayDigits ]
 [v _minutes `uc ~T0 @X0 1 r1 ]
 [v _seconds `uc ~T0 @X0 1 r2 ]
 [f ]
-"62
-[; ;main.c: 62:     uint8_t digit[4];
+"59
+[; ;main.c: 59:     uint8_t digit[4];
 [v _digit `uc ~T0 @X0 -> 4 `i a ]
-"63
-[; ;main.c: 63:     digit[0] = minutes / 10;
+"60
+[; ;main.c: 60:     digit[0] = minutes / 10;
 [e = *U + &U _digit * -> -> -> 0 `i `ui `ux -> -> # *U &U _digit `ui `ux -> / -> _minutes `i -> 10 `i `uc ]
-"64
-[; ;main.c: 64:     digit[1] = minutes % 10;
+"61
+[; ;main.c: 61:     digit[1] = minutes % 10;
 [e = *U + &U _digit * -> -> -> 1 `i `ui `ux -> -> # *U &U _digit `ui `ux -> % -> _minutes `i -> 10 `i `uc ]
-"65
-[; ;main.c: 65:     digit[2] = seconds / 10;
+"62
+[; ;main.c: 62:     digit[2] = seconds / 10;
 [e = *U + &U _digit * -> -> -> 2 `i `ui `ux -> -> # *U &U _digit `ui `ux -> / -> _seconds `i -> 10 `i `uc ]
-"66
-[; ;main.c: 66:     digit[3] = seconds % 10;
+"63
+[; ;main.c: 63:     digit[3] = seconds % 10;
 [e = *U + &U _digit * -> -> -> 3 `i `ui `ux -> -> # *U &U _digit `ui `ux -> % -> _seconds `i -> 10 `i `uc ]
-"68
-[; ;main.c: 68:     for (int i = 0; i < 4; i++) {
+"65
+[; ;main.c: 65:     for (int i = 0; i < 4; i++) {
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -445,232 +442,232 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 240  ]
 [e :U 239 ]
 {
-"69
-[; ;main.c: 69:         LATC = SEGMENT_MAP[digit[i]];
+"66
+[; ;main.c: 66:         LATC = SEGMENT_MAP[digit[i]];
 [e = _LATC *U + &U _SEGMENT_MAP * -> *U + &U _digit * -> -> _i `ui `ux -> -> # *U &U _digit `ui `ux `ux -> -> # *U &U _SEGMENT_MAP `ui `ux ]
-"70
-[; ;main.c: 70:         LATB = (1 << i);
+"67
+[; ;main.c: 67:         LATB = (1 << i);
 [e = _LATB -> << -> 1 `i _i `uc ]
-"71
-[; ;main.c: 71:         _delay((unsigned long)((1)*(20000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"72
-[; ;main.c: 72:         LATB = 0;
+"68
+[; ;main.c: 68:         _delay((unsigned long)((1)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"69
+[; ;main.c: 69:         LATB = 0;
 [e = _LATB -> -> 0 `i `uc ]
-"73
-[; ;main.c: 73:     }
+"70
+[; ;main.c: 70:     }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 4 `i 239  ]
 [e :U 240 ]
 }
-"74
-[; ;main.c: 74: }
+"71
+[; ;main.c: 71: }
 [e :UE 238 ]
 }
-"77
-[; ;main.c: 77: void Timer0_OverflowCallback(void) {
-[v _Timer0_OverflowCallback `(v ~T0 @X0 1 ef ]
+"73
+[; ;main.c: 73: void decreaseTime(void) {
+[v _decreaseTime `(v ~T0 @X0 1 ef ]
 {
-[e :U _Timer0_OverflowCallback ]
+[e :U _decreaseTime ]
 [f ]
-"78
-[; ;main.c: 78:     static unsigned int ms_count = 0;
+"74
+[; ;main.c: 74:     static unsigned int ms_count = 0;
 [v F1752 `ui ~T0 @X0 1 s ms_count ]
 [i F1752
 -> -> 0 `i `ui
 ]
-"83
-[; ;main.c: 83:     if (timer_running) {
+"76
+[; ;main.c: 76:     if (timer_running) {
 [e $ ! != -> _timer_running `i -> 0 `i 243  ]
 {
-"84
-[; ;main.c: 84:         ms_count++;
+"77
+[; ;main.c: 77:         ms_count++;
 [e ++ F1752 -> -> 1 `i `ui ]
-"85
-[; ;main.c: 85:         if (ms_count >= 1000) {
-[e $ ! >= F1752 -> -> 1000 `i `ui 244  ]
+"78
+[; ;main.c: 78:         if (ms_count >= 123) {
+[e $ ! >= F1752 -> -> 123 `i `ui 244  ]
 {
-"86
-[; ;main.c: 86:             ms_count = 0;
+"79
+[; ;main.c: 79:             ms_count = 0;
 [e = F1752 -> -> 0 `i `ui ]
-"87
-[; ;main.c: 87:             if (seconds == 0) {
+"80
+[; ;main.c: 80:             if (seconds == 0) {
 [e $ ! == -> _seconds `i -> 0 `i 245  ]
 {
-"88
-[; ;main.c: 88:                 if (minutes == 0) {
+"81
+[; ;main.c: 81:                 if (minutes == 0) {
 [e $ ! == -> _minutes `i -> 0 `i 246  ]
 {
-"89
-[; ;main.c: 89:                     timer_running = 0;
+"82
+[; ;main.c: 82:                     timer_running = 0;
 [e = _timer_running -> -> 0 `i `a ]
-"90
-[; ;main.c: 90:                 } else {
+"83
+[; ;main.c: 83:                 } else {
 }
 [e $U 247  ]
 [e :U 246 ]
 {
-"91
-[; ;main.c: 91:                     minutes--;
+"84
+[; ;main.c: 84:                     minutes--;
 [e -- _minutes -> -> 1 `i `uc ]
-"92
-[; ;main.c: 92:                     seconds = 59;
+"85
+[; ;main.c: 85:                     seconds = 59;
 [e = _seconds -> -> 59 `i `uc ]
-"93
-[; ;main.c: 93:                 }
+"86
+[; ;main.c: 86:                 }
 }
 [e :U 247 ]
-"94
-[; ;main.c: 94:             } else {
+"87
+[; ;main.c: 87:             } else {
 }
 [e $U 248  ]
 [e :U 245 ]
 {
-"95
-[; ;main.c: 95:                 seconds--;
+"88
+[; ;main.c: 88:                 seconds--;
 [e -- _seconds -> -> 1 `i `uc ]
-"96
-[; ;main.c: 96:             }
+"89
+[; ;main.c: 89:             }
 }
 [e :U 248 ]
-"97
-[; ;main.c: 97:         }
+"90
+[; ;main.c: 90:         }
 }
 [e :U 244 ]
-"98
-[; ;main.c: 98:     }
+"91
+[; ;main.c: 91:     }
 }
 [e :U 243 ]
-"99
-[; ;main.c: 99: }
+"92
+[; ;main.c: 92: }
 [e :UE 242 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"105
-[; ;main.c: 105: int main(void) {
+"98
+[; ;main.c: 98: int main(void) {
 [v _main `(i ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"106
-[; ;main.c: 106:     SYSTEM_Initialize();
+"99
+[; ;main.c: 99:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"109
-[; ;main.c: 109:     (INTCONbits.GIE = 1);
+"102
+[; ;main.c: 102:     (INTCONbits.GIE = 1);
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"112
-[; ;main.c: 112:     (INTCONbits.PEIE = 1);
+"105
+[; ;main.c: 105:     (INTCONbits.PEIE = 1);
 [e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"115
-[; ;main.c: 115:     Timer0_OverflowCallbackRegister(Timer0_OverflowCallback);
-[e ( _Timer0_OverflowCallbackRegister (1 &U _Timer0_OverflowCallback ]
-"117
-[; ;main.c: 117:     while(1) {
+"107
+[; ;main.c: 107:     while(1) {
 [e :U 251 ]
 {
-"118
-[; ;main.c: 118:         if (PORTAbits.RA0 == 0 && !timer_running) {
+"108
+[; ;main.c: 108:         if (PORTAbits.RA0 == 0 && !timer_running) {
 [e $ ! && == -> . . _PORTAbits 0 0 `i -> 0 `i ! != -> _timer_running `i -> 0 `i 253  ]
 {
-"119
-[; ;main.c: 119:             _delay((unsigned long)((20)*(20000000/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"120
-[; ;main.c: 120:             if (PORTAbits.RA0 == 0) {
+"109
+[; ;main.c: 109:             _delay((unsigned long)((100)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"110
+[; ;main.c: 110:             if (PORTAbits.RA0 == 0) {
 [e $ ! == -> . . _PORTAbits 0 0 `i -> 0 `i 254  ]
 {
-"121
-[; ;main.c: 121:                 minutes++;
+"111
+[; ;main.c: 111:                 minutes++;
 [e ++ _minutes -> -> 1 `i `uc ]
-"122
-[; ;main.c: 122:                 if (minutes > 99) {
+"112
+[; ;main.c: 112:                 if (minutes > 99) {
 [e $ ! > -> _minutes `i -> 99 `i 255  ]
 {
-"123
-[; ;main.c: 123:                     minutes = 99;
+"113
+[; ;main.c: 113:                     minutes = 99;
 [e = _minutes -> -> 99 `i `uc ]
-"124
-[; ;main.c: 124:                 }
+"114
+[; ;main.c: 114:                 }
 }
 [e :U 255 ]
-"125
-[; ;main.c: 125:             }
+"115
+[; ;main.c: 115:             }
 }
 [e :U 254 ]
-"126
-[; ;main.c: 126:         }
+"116
+[; ;main.c: 116:         }
 }
 [e :U 253 ]
-"128
-[; ;main.c: 128:         if (PORTAbits.RA1 == 0 && !timer_running) {
+"118
+[; ;main.c: 118:         if (PORTAbits.RA1 == 0 && !timer_running) {
 [e $ ! && == -> . . _PORTAbits 0 1 `i -> 0 `i ! != -> _timer_running `i -> 0 `i 256  ]
 {
-"129
-[; ;main.c: 129:             _delay((unsigned long)((20)*(20000000/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"130
-[; ;main.c: 130:             if (PORTAbits.RA1 == 0) {
+"119
+[; ;main.c: 119:             _delay((unsigned long)((100)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"120
+[; ;main.c: 120:             if (PORTAbits.RA1 == 0) {
 [e $ ! == -> . . _PORTAbits 0 1 `i -> 0 `i 257  ]
 {
-"131
-[; ;main.c: 131:                 if (minutes > 0) {
+"121
+[; ;main.c: 121:                 if (minutes > 0) {
 [e $ ! > -> _minutes `i -> 0 `i 258  ]
 {
-"132
-[; ;main.c: 132:                     minutes--;
+"122
+[; ;main.c: 122:                     minutes--;
 [e -- _minutes -> -> 1 `i `uc ]
-"133
-[; ;main.c: 133:                 }
+"123
+[; ;main.c: 123:                 }
 }
 [e :U 258 ]
-"134
-[; ;main.c: 134:             }
+"124
+[; ;main.c: 124:             }
 }
 [e :U 257 ]
-"135
-[; ;main.c: 135:         }
+"125
+[; ;main.c: 125:         }
 }
 [e :U 256 ]
-"137
-[; ;main.c: 137:         if (PORTAbits.RA2 == 0) {
+"127
+[; ;main.c: 127:         if (PORTAbits.RA2 == 0) {
 [e $ ! == -> . . _PORTAbits 0 2 `i -> 0 `i 259  ]
 {
-"138
-[; ;main.c: 138:             _delay((unsigned long)((20)*(20000000/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"139
-[; ;main.c: 139:             if (PORTAbits.RA2 == 0 && !timer_running) {
+"128
+[; ;main.c: 128:             _delay((unsigned long)((100)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"129
+[; ;main.c: 129:             if (PORTAbits.RA2 == 0 && !timer_running) {
 [e $ ! && == -> . . _PORTAbits 0 2 `i -> 0 `i ! != -> _timer_running `i -> 0 `i 260  ]
 {
-"140
-[; ;main.c: 140:                 timer_running = 1;
+"130
+[; ;main.c: 130:                 timer_running = 1;
 [e = _timer_running -> -> 1 `i `a ]
-"141
-[; ;main.c: 141:                 while (PORTAbits.RA2 == 0);
+"131
+[; ;main.c: 131:                 while (PORTAbits.RA2 == 0);
 [e $U 261  ]
 [e :U 262 ]
 [e :U 261 ]
 [e $ == -> . . _PORTAbits 0 2 `i -> 0 `i 262  ]
 [e :U 263 ]
-"142
-[; ;main.c: 142:             }
+"132
+[; ;main.c: 132:             }
 }
 [e :U 260 ]
-"143
-[; ;main.c: 143:         }
+"133
+[; ;main.c: 133:         }
 }
 [e :U 259 ]
-"146
-[; ;main.c: 146:         displayDigits(minutes, seconds);
+"135
+[; ;main.c: 135:         decreaseTime();
+[e ( _decreaseTime ..  ]
+"137
+[; ;main.c: 137:         displayDigits(minutes, seconds);
 [e ( _displayDigits (2 , _minutes _seconds ]
-"147
-[; ;main.c: 147:     }
+"138
+[; ;main.c: 138:     }
 }
 [e :U 250 ]
 [e $U 251  ]
 [e :U 252 ]
-"148
-[; ;main.c: 148: }
+"139
+[; ;main.c: 139: }
 [e :UE 249 ]
 }

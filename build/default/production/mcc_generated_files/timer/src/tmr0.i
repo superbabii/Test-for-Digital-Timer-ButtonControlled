@@ -3099,13 +3099,13 @@ static void Timer0_DefaultOverflowCallback(void);
 void Timer0_Initialize(void)
 {
 
-  OPTION_REG = (uint8_t)((OPTION_REG & 0xC0) | (0xD7 & 0x3F));
+  OPTION_REG = (uint8_t)((OPTION_REG & 0xC0) | (0xD2 & 0x3F));
 
 
-  TMR0 = 0xED;
+  TMR0 = 0x83;
 
 
-  timer0ReloadVal = 237;
+  timer0ReloadVal = 131;
 
 
   Timer0_OverflowCallbackRegister(Timer0_DefaultOverflowCallback);

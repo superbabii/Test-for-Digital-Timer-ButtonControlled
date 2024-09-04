@@ -38,8 +38,8 @@
 
 void CLOCK_Initialize(void)
 {
-    OSCCON = (15 << _OSCCON_IRCF_POSN)   // IRCF 16MHz_HF
-        | (0 << _OSCCON_SCS_POSN);  // SCS FOSC
+    OSCCON = (13 << _OSCCON_IRCF_POSN)   // IRCF 4MHz_HF
+        | (2 << _OSCCON_SCS_POSN);  // SCS INTOSC
     BORCON = (0 << _BORCON_SBOREN_POSN)   // SBOREN disabled
         | (0 << _BORCON_BORFS_POSN);  // BORFS disabled
 }

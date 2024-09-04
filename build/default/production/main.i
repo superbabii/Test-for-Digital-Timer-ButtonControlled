@@ -3145,9 +3145,6 @@ uint8_t digit[4];
 _Bool timer_running = 0;
 
 
-
-
-
 void displayDigits(uint8_t minutes, uint8_t seconds) {
     uint8_t digit[4];
     digit[0] = minutes / 10;
@@ -3158,21 +3155,17 @@ void displayDigits(uint8_t minutes, uint8_t seconds) {
     for (int i = 0; i < 4; i++) {
         LATC = SEGMENT_MAP[digit[i]];
         LATB = (1 << i);
-        _delay((unsigned long)((1)*(20000000/4000.0)));
+        _delay((unsigned long)((1)*(4000000/4000.0)));
         LATB = 0;
     }
 }
 
-
-void Timer0_OverflowCallback(void) {
+void decreaseTime(void) {
     static unsigned int ms_count = 0;
-
-
-
 
     if (timer_running) {
         ms_count++;
-        if (ms_count >= 1000) {
+        if (ms_count >= 123) {
             ms_count = 0;
             if (seconds == 0) {
                 if (minutes == 0) {
@@ -3201,12 +3194,9 @@ int main(void) {
 
     (INTCONbits.PEIE = 1);
 
-
-    Timer0_OverflowCallbackRegister(Timer0_OverflowCallback);
-
     while(1) {
         if (PORTAbits.RA0 == 0 && !timer_running) {
-            _delay((unsigned long)((20)*(20000000/4000.0)));
+            _delay((unsigned long)((100)*(4000000/4000.0)));
             if (PORTAbits.RA0 == 0) {
                 minutes++;
                 if (minutes > 99) {
@@ -3216,7 +3206,7 @@ int main(void) {
         }
 
         if (PORTAbits.RA1 == 0 && !timer_running) {
-            _delay((unsigned long)((20)*(20000000/4000.0)));
+            _delay((unsigned long)((100)*(4000000/4000.0)));
             if (PORTAbits.RA1 == 0) {
                 if (minutes > 0) {
                     minutes--;
@@ -3225,13 +3215,14 @@ int main(void) {
         }
 
         if (PORTAbits.RA2 == 0) {
-            _delay((unsigned long)((20)*(20000000/4000.0)));
+            _delay((unsigned long)((100)*(4000000/4000.0)));
             if (PORTAbits.RA2 == 0 && !timer_running) {
                 timer_running = 1;
                 while (PORTAbits.RA2 == 0);
             }
         }
 
+        decreaseTime();
 
         displayDigits(minutes, seconds);
     }

@@ -49,14 +49,14 @@ static void Timer0_DefaultOverflowCallback(void);
 
 void Timer0_Initialize(void)
 {
-  // PS 1:256; PSA assigned; TMRSE Increment_hi_lo; TMRCS FOSC/4; mask the nWPUEN and INTEDG bits
-  OPTION_REG = (uint8_t)((OPTION_REG & 0xC0) | (0xD7 & 0x3F));
+  // PS 1:8; PSA assigned; TMRSE Increment_hi_lo; TMRCS FOSC/4; mask the nWPUEN and INTEDG bits
+  OPTION_REG = (uint8_t)((OPTION_REG & 0xC0) | (0xD2 & 0x3F));
 
-  // TMR 237; 
-  TMR0 = 0xED;
+  // TMR 131; 
+  TMR0 = 0x83;
 
   // Load the TMR value to reload variable
-  timer0ReloadVal = 237;
+  timer0ReloadVal = 131;
 
   //Set default callback for TMR0 overflow interrupt
   Timer0_OverflowCallbackRegister(Timer0_DefaultOverflowCallback);

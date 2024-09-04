@@ -415,14 +415,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _Timer0_Initialize ]
 [f ]
 "53
-[; ;mcc_generated_files/timer/src/tmr0.c: 53:   OPTION_REG = (uint8_t)((OPTION_REG & 0xC0) | (0xD7 & 0x3F));
-[e = _OPTION_REG -> | & -> _OPTION_REG `i -> 192 `i & -> 215 `i -> 63 `i `uc ]
+[; ;mcc_generated_files/timer/src/tmr0.c: 53:   OPTION_REG = (uint8_t)((OPTION_REG & 0xC0) | (0xD2 & 0x3F));
+[e = _OPTION_REG -> | & -> _OPTION_REG `i -> 192 `i & -> 210 `i -> 63 `i `uc ]
 "56
-[; ;mcc_generated_files/timer/src/tmr0.c: 56:   TMR0 = 0xED;
-[e = _TMR0 -> -> 237 `i `uc ]
+[; ;mcc_generated_files/timer/src/tmr0.c: 56:   TMR0 = 0x83;
+[e = _TMR0 -> -> 131 `i `uc ]
 "59
-[; ;mcc_generated_files/timer/src/tmr0.c: 59:   timer0ReloadVal = 237;
-[e = _timer0ReloadVal -> -> 237 `i `uc ]
+[; ;mcc_generated_files/timer/src/tmr0.c: 59:   timer0ReloadVal = 131;
+[e = _timer0ReloadVal -> -> 131 `i `uc ]
 "62
 [; ;mcc_generated_files/timer/src/tmr0.c: 62:   Timer0_OverflowCallbackRegister(Timer0_DefaultOverflowCallback);
 [e ( _Timer0_OverflowCallbackRegister (1 &U _Timer0_DefaultOverflowCallback ]

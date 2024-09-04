@@ -347,8 +347,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _CLOCK_Initialize ]
 [f ]
 "41
-[; ;mcc_generated_files/system/src/clock.c: 41:     OSCCON = (15 << 0x3)
-[e = _OSCCON -> | << -> 15 `i -> 3 `i << -> 0 `i -> 0 `i `uc ]
+[; ;mcc_generated_files/system/src/clock.c: 41:     OSCCON = (13 << 0x3)
+[e = _OSCCON -> | << -> 13 `i -> 3 `i << -> 2 `i -> 0 `i `uc ]
 "43
 [; ;mcc_generated_files/system/src/clock.c: 43:     BORCON = (0 << 0x7)
 [e = _BORCON -> | << -> 0 `i -> 7 `i << -> 0 `i -> 6 `i `uc ]
