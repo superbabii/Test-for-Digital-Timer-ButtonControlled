@@ -1,4 +1,4 @@
- /*
+/*
  * MAIN Generated Driver File
  * 
  * @file main.c
@@ -65,7 +65,7 @@ void displayDigits(uint8_t minutes, uint8_t seconds) {
     for (int i = 0; i < 4; i++) {
         LATC = SEGMENT_MAP[digit[i]];
         LATB = (1 << i);
-        __delay_ms(1);
+        __delay_ms(1); // Brief delay for display multiplexing
         LATB = 0;
     }
 }
@@ -132,8 +132,14 @@ int main(void) {
             }
         }
         
+        // Control the LED based on the timer_running state
+        if(timer_running)
+            LATAbits.LATA4 = 1; // Turn on the LED
+        else
+            LATAbits.LATA4 = 0; // Turn off the LED
+
+        // Decrease time and update display
         decreaseTime();
-        // Display the time
         displayDigits(minutes, seconds);
     }    
 }

@@ -39,6 +39,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "446
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc\pic16f1518.h: 446: extern volatile PORTAbits_t PORTAbits __attribute__((address(0x00C)));
 [v _PORTAbits `VS33 ~T0 @X0 0 e@12 ]
+"1860
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc\pic16f1518.h: 1860:     struct {
+[s S100 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S100 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 LATA6 LATA7 ]
+"1859
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc\pic16f1518.h: 1859: typedef union {
+[u S99 `S100 1 ]
+[n S99 . . ]
+"1871
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc\pic16f1518.h: 1871: extern volatile LATAbits_t LATAbits __attribute__((address(0x10C)));
+[v _LATAbits `VS99 ~T0 @X0 0 e@268 ]
 "54 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc\pic16f1518.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc\pic16f1518.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -655,19 +666,33 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 133:         }
 }
 [e :U 259 ]
-"135
-[; ;main.c: 135:         decreaseTime();
-[e ( _decreaseTime ..  ]
+"136
+[; ;main.c: 136:         if(timer_running)
+[e $ ! != -> _timer_running `i -> 0 `i 264  ]
 "137
-[; ;main.c: 137:         displayDigits(minutes, seconds);
-[e ( _displayDigits (2 , _minutes _seconds ]
+[; ;main.c: 137:             LATAbits.LATA4 = 1;
+[e = . . _LATAbits 0 4 -> -> 1 `i `uc ]
+[e $U 265  ]
 "138
-[; ;main.c: 138:     }
+[; ;main.c: 138:         else
+[e :U 264 ]
+"139
+[; ;main.c: 139:             LATAbits.LATA4 = 0;
+[e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
+[e :U 265 ]
+"142
+[; ;main.c: 142:         decreaseTime();
+[e ( _decreaseTime ..  ]
+"143
+[; ;main.c: 143:         displayDigits(minutes, seconds);
+[e ( _displayDigits (2 , _minutes _seconds ]
+"144
+[; ;main.c: 144:     }
 }
 [e :U 250 ]
 [e $U 251  ]
 [e :U 252 ]
-"139
-[; ;main.c: 139: }
+"145
+[; ;main.c: 145: }
 [e :UE 249 ]
 }
