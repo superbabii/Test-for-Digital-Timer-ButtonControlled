@@ -15,6 +15,12 @@ This repository contains a test project for a button-controlled digital timer us
 - **Multiplexed 7-Segment Display**: 
   - The current countdown time is displayed using a 4-digit 7-segment display, with multiplexing handled in the main loop.
 
+- **4MHz Internal Oscillator**: 
+  - The project uses a 4MHz internal oscillator for timing and clock operations.
+
+- **Timer0 Configuration**: 
+  - Timer0 is configured with a prescaler of 1:8 for accurate timekeeping.
+
 ## Project Structure
 
 - **main.c**: Core logic for countdown timekeeping, button handling, and display multiplexing.
