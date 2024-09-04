@@ -11,13 +11,13 @@
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"48 D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+"61 D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
 [v _update_display update_display `(v  1 e 1 0 ]
-"56
+"69
 [v _Timer0_OverflowCallback Timer0_OverflowCallback `(v  1 e 1 0 ]
-"81
+"94
 [v _handle_buttons handle_buttons `(v  1 e 1 0 ]
-"118
+"131
 [v _main main `(i  1 e 2 0 ]
 "39 D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/clock.c
 [v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
@@ -139,13 +139,13 @@
 [v _IOCBN IOCBN `VEuc  1 e 1 @917 ]
 "3974
 [v _IOCBF IOCBF `VEuc  1 e 1 @918 ]
-"39 D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-[v _seconds seconds `uc  1 e 1 0 ]
-"40
+"52 D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
 [v _minutes minutes `uc  1 e 1 0 ]
-"41
+"53
+[v _seconds seconds `uc  1 e 1 0 ]
+"54
 [v _digit digit `[4]uc  1 e 4 0 ]
-"42
+"55
 [v _timer_running timer_running `a  1 e 1 0 ]
 "38 D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/interrupt.c
 [v _INT_InterruptHandler INT_InterruptHandler `*.37(v  1 e 2 0 ]
@@ -153,15 +153,15 @@
 [v _timer0ReloadVal timer0ReloadVal `VEuc  1 e 1 0 ]
 "47
 [v _Timer0_OverflowCallback@tmr0$F279 Timer0_OverflowCallback `*.37(v  1 s 2 Timer0_OverflowCallback ]
-"118 D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+"131 D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"143
+"156
 } 0
-"48
+"61
 [v _update_display update_display `(v  1 e 1 0 ]
 {
-"53
+"66
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
@@ -187,10 +187,10 @@
 [v ___awdiv@dividend dividend `i  1 p 2 2 ]
 "41
 } 0
-"81 D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+"94 D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
 [v _handle_buttons handle_buttons `(v  1 e 1 0 ]
 {
-"112
+"125
 } 0
 "77 D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/timer/src/tmr0.c
 [v _Timer0_Write Timer0_Write `(v  1 e 1 0 ]

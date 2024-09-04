@@ -3125,10 +3125,23 @@ void SYSTEM_Initialize(void);
 
 
 
+const uint8_t SEGMENT_MAP[10] = {
+    0b00111111,
+    0b00000110,
+    0b01011011,
+    0b01001111,
+    0b01100110,
+    0b01101101,
+    0b01111101,
+    0b00000111,
+    0b01111111,
+    0b01101111
+};
 
-unsigned char seconds = 0;
-unsigned char minutes = 0;
-unsigned char digit[4];
+
+uint8_t minutes = 0;
+uint8_t seconds = 0;
+uint8_t digit[4];
 _Bool timer_running = 0;
 
 
@@ -3225,9 +3238,9 @@ int main(void) {
         handle_buttons();
 
 
-        LATBbits.LATB0 = 1; LATC = digit[0]; _delay((unsigned long)((1)*(20000000/4000.0))); LATBbits.LATB0 = 0;
-        LATBbits.LATB1 = 1; LATC = digit[1]; _delay((unsigned long)((1)*(20000000/4000.0))); LATBbits.LATB1 = 0;
-        LATBbits.LATB2 = 1; LATC = digit[2]; _delay((unsigned long)((1)*(20000000/4000.0))); LATBbits.LATB2 = 0;
-        LATBbits.LATB3 = 1; LATC = digit[3]; _delay((unsigned long)((1)*(20000000/4000.0))); LATBbits.LATB3 = 0;
+        LATBbits.LATB0 = 1; LATC = 1; _delay((unsigned long)((1)*(20000000/4000.0))); LATBbits.LATB0 = 0;
+        LATBbits.LATB1 = 1; LATC = 2; _delay((unsigned long)((1)*(20000000/4000.0))); LATBbits.LATB1 = 0;
+        LATBbits.LATB2 = 1; LATC = 3; _delay((unsigned long)((1)*(20000000/4000.0))); LATBbits.LATB2 = 0;
+        LATBbits.LATB3 = 1; LATC = 4; _delay((unsigned long)((1)*(20000000/4000.0))); LATBbits.LATB3 = 0;
     }
 }

@@ -11,28 +11,29 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_12.o
+$C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_12.o
 reset_vec CODE 0 0 0 2 2 1
 end_init CODE 0 2 2 2 2 1
 config CONFIG 4 8007 8007 2 2 1
 $dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 cinit CODE 0 7F2 7F2 E 2 1
-text1 CODE 0 63E 63E 45 2 1
-text2 CODE 0 683 683 53 2 1
+text1 CODE 0 646 646 45 2 1
+text2 CODE 0 6DC 6DC 53 2 1
 text3 CODE 0 72F 72F 5F 2 1
 text4 CODE 0 78E 78E 64 2 1
-text5 CODE 0 5DF 5DF 4 2 1
-text6 CODE 0 600 600 D 2 1
-text7 CODE 0 60D 60D 13 2 1
-text8 CODE 0 5EF 5EF 6 2 1
-text9 CODE 0 620 620 1E 2 1
-text10 CODE 0 5F5 5F5 B 2 1
-text11 CODE 0 5E9 5E9 6 2 1
-text12 CODE 0 5E3 5E3 6 2 1
+text5 CODE 0 5E7 5E7 4 2 1
+text6 CODE 0 608 608 D 2 1
+text7 CODE 0 615 615 13 2 1
+text8 CODE 0 5F7 5F7 6 2 1
+text9 CODE 0 628 628 1E 2 1
+text10 CODE 0 5FD 5FD B 2 1
+text11 CODE 0 5F1 5F1 6 2 1
+text12 CODE 0 5EB 5EB 6 2 1
 nvBANK0 BANK0 1 28 28 4 1 1
-maintext CODE 0 6D6 6D6 59 2 1
+maintext CODE 0 68B 68B 51 2 1
 cstackCOMMON COMMON 1 70 70 C 1 1
 stringtext1 STRCODE 0 800 800 C 2 1
+stringtext2 STRCODE 0 80C 80C A 2 1
 bssBANK0 BANK0 1 20 20 8 1 1
 bssCOMMON COMMON 1 7C 7C 2 1 1
 config CONFIG 4 8007 8007 2 2 1
@@ -65,10 +66,10 @@ BANK6 320-36F 1
 BANK7 3A0-3EF 1
 BANK8 420-46F 1
 BANK9 4A0-4EF 1
-CONST 4-5DE 2
-CONST 80C-3FFF 2
-ENTRY 4-5DE 2
-ENTRY 80C-3FFF 2
+CONST 4-5E6 2
+CONST 816-3FFF 2
+ENTRY 4-5E6 2
+ENTRY 816-3FFF 2
 IDLOC 8000-8003 2
 SFR10 500-51F 1
 SFR11 580-59F 1
@@ -92,8 +93,8 @@ SFR28 E00-E6F 1
 SFR29 E80-EEF 1
 SFR30 F00-F6F 1
 SFR31 F80-FEF 1
-CODE 4-5DE 2
-CODE 80C-3FFF 2
+CODE 4-5E6 2
+CODE 816-3FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-11F 1
@@ -108,10 +109,10 @@ BANK10 520-56F 1
 BANK11 5A0-5EF 1
 BANK12 620-64F 1
 BIGRAM 2000-23EF 1
-STRCODE 4-5DE 2
-STRCODE 80C-3FFF 2
-STRING 4-5DE 2
-STRING 80C-3FFF 2
+STRCODE 4-5E6 2
+STRCODE 816-3FFF 2
+STRING 4-5E6 2
+STRING 816-3FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -126,97 +127,97 @@ STRING 80C-3FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-7F2 cinit CODE >1570:C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_1.s
-7F2 cinit CODE >1573:C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_1.s
-7F2 cinit CODE >1603:C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_1.s
-7F3 cinit CODE >1604:C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_1.s
-7F4 cinit CODE >1608:C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_1.s
-7F5 cinit CODE >1609:C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_1.s
-7F6 cinit CODE >1610:C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_1.s
-7F7 cinit CODE >1611:C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_1.s
-7F8 cinit CODE >1612:C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_1.s
-7F9 cinit CODE >1613:C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_1.s
-7FA cinit CODE >1614:C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_1.s
-7FB cinit CODE >1615:C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_1.s
-7FC cinit CODE >1616:C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_1.s
-7FD cinit CODE >1622:C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_1.s
-7FD cinit CODE >1624:C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_1.s
-7FE cinit CODE >1625:C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_1.s
-5E3 text12 CODE >39:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/clock.c
-5E3 text12 CODE >41:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/clock.c
-5E6 text12 CODE >43:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/clock.c
-5E8 text12 CODE >45:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/clock.c
-5E9 text11 CODE >71:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/interrupt.c
-5E9 text11 CODE >72:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/interrupt.c
-5EE text11 CODE >73:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/interrupt.c
-5F5 text10 CODE >40:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/interrupt.c
-5F5 text10 CODE >44:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/interrupt.c
-5F6 text10 CODE >45:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/interrupt.c
-5F8 text10 CODE >47:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/interrupt.c
-5FF text10 CODE >50:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/interrupt.c
-620 text9 CODE >38:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
-620 text9 CODE >43:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
-622 text9 CODE >44:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
-623 text9 CODE >45:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
-624 text9 CODE >50:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
-627 text9 CODE >51:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
-629 text9 CODE >52:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
-62A text9 CODE >53:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
-62C text9 CODE >58:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
-62E text9 CODE >59:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
-630 text9 CODE >60:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
-631 text9 CODE >65:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
-634 text9 CODE >66:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
-636 text9 CODE >67:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
-638 text9 CODE >91:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
-63A text9 CODE >92:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
-63B text9 CODE >93:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
-63C text9 CODE >97:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
-63D text9 CODE >98:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
-5EF text8 CODE >94:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/timer/src/tmr0.c
-5EF text8 CODE >96:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/timer/src/tmr0.c
-5F4 text8 CODE >97:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/timer/src/tmr0.c
-60D text7 CODE >50:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/timer/src/tmr0.c
-60D text7 CODE >53:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/timer/src/tmr0.c
-612 text7 CODE >56:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/timer/src/tmr0.c
-615 text7 CODE >59:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/timer/src/tmr0.c
-617 text7 CODE >62:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/timer/src/tmr0.c
-61E text7 CODE >65:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/timer/src/tmr0.c
-61F text7 CODE >66:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/timer/src/tmr0.c
-600 text6 CODE >39:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/system.c
-600 text6 CODE >41:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/system.c
-603 text6 CODE >42:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/system.c
-606 text6 CODE >43:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/system.c
-609 text6 CODE >44:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/system.c
-60C text6 CODE >45:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/system.c
-5DF text5 CODE >77:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/timer/src/tmr0.c
-5DF text5 CODE >80:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/timer/src/tmr0.c
-5E2 text5 CODE >81:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/timer/src/tmr0.c
-78E text4 CODE >81:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-78E text4 CODE >82:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-798 text4 CODE >83:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-79F text4 CODE >84:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-7A4 text4 CODE >85:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-7A8 text4 CODE >86:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-7AA text4 CODE >86:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-7AE text4 CODE >87:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-7AF text4 CODE >89:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-7B3 text4 CODE >91:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-7B3 text4 CODE >93:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-7BC text4 CODE >94:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-7C3 text4 CODE >95:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-7C8 text4 CODE >96:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-7CD text4 CODE >97:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-7CF text4 CODE >98:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-7D0 text4 CODE >99:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-7D2 text4 CODE >101:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-7D6 text4 CODE >103:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-7D6 text4 CODE >105:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-7DA text4 CODE >106:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-7E1 text4 CODE >107:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-7EB text4 CODE >108:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-7ED text4 CODE >109:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-7F1 text4 CODE >112:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+7F2 cinit CODE >1588:C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_1.s
+7F2 cinit CODE >1591:C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_1.s
+7F2 cinit CODE >1621:C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_1.s
+7F3 cinit CODE >1622:C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_1.s
+7F4 cinit CODE >1626:C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_1.s
+7F5 cinit CODE >1627:C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_1.s
+7F6 cinit CODE >1628:C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_1.s
+7F7 cinit CODE >1629:C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_1.s
+7F8 cinit CODE >1630:C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_1.s
+7F9 cinit CODE >1631:C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_1.s
+7FA cinit CODE >1632:C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_1.s
+7FB cinit CODE >1633:C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_1.s
+7FC cinit CODE >1634:C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_1.s
+7FD cinit CODE >1640:C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_1.s
+7FD cinit CODE >1642:C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_1.s
+7FE cinit CODE >1643:C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_1.s
+5EB text12 CODE >39:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/clock.c
+5EB text12 CODE >41:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/clock.c
+5EE text12 CODE >43:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/clock.c
+5F0 text12 CODE >45:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/clock.c
+5F1 text11 CODE >71:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/interrupt.c
+5F1 text11 CODE >72:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/interrupt.c
+5F6 text11 CODE >73:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/interrupt.c
+5FD text10 CODE >40:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/interrupt.c
+5FD text10 CODE >44:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/interrupt.c
+5FE text10 CODE >45:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/interrupt.c
+600 text10 CODE >47:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/interrupt.c
+607 text10 CODE >50:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/interrupt.c
+628 text9 CODE >38:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
+628 text9 CODE >43:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
+62A text9 CODE >44:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
+62B text9 CODE >45:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
+62C text9 CODE >50:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
+62F text9 CODE >51:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
+631 text9 CODE >52:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
+632 text9 CODE >53:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
+634 text9 CODE >58:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
+636 text9 CODE >59:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
+638 text9 CODE >60:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
+639 text9 CODE >65:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
+63C text9 CODE >66:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
+63E text9 CODE >67:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
+640 text9 CODE >91:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
+642 text9 CODE >92:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
+643 text9 CODE >93:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
+644 text9 CODE >97:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
+645 text9 CODE >98:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/pins.c
+5F7 text8 CODE >94:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/timer/src/tmr0.c
+5F7 text8 CODE >96:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/timer/src/tmr0.c
+5FC text8 CODE >97:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/timer/src/tmr0.c
+615 text7 CODE >50:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/timer/src/tmr0.c
+615 text7 CODE >53:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/timer/src/tmr0.c
+61A text7 CODE >56:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/timer/src/tmr0.c
+61D text7 CODE >59:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/timer/src/tmr0.c
+61F text7 CODE >62:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/timer/src/tmr0.c
+626 text7 CODE >65:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/timer/src/tmr0.c
+627 text7 CODE >66:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/timer/src/tmr0.c
+608 text6 CODE >39:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/system.c
+608 text6 CODE >41:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/system.c
+60B text6 CODE >42:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/system.c
+60E text6 CODE >43:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/system.c
+611 text6 CODE >44:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/system.c
+614 text6 CODE >45:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/system.c
+5E7 text5 CODE >77:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/timer/src/tmr0.c
+5E7 text5 CODE >80:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/timer/src/tmr0.c
+5EA text5 CODE >81:D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/timer/src/tmr0.c
+78E text4 CODE >94:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+78E text4 CODE >95:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+798 text4 CODE >96:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+79F text4 CODE >97:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+7A4 text4 CODE >98:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+7A8 text4 CODE >99:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+7AA text4 CODE >99:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+7AE text4 CODE >100:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+7AF text4 CODE >102:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+7B3 text4 CODE >104:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+7B3 text4 CODE >106:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+7BC text4 CODE >107:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+7C3 text4 CODE >108:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+7C8 text4 CODE >109:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+7CD text4 CODE >110:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+7CF text4 CODE >111:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+7D0 text4 CODE >112:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+7D2 text4 CODE >114:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+7D6 text4 CODE >116:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+7D6 text4 CODE >118:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+7DA text4 CODE >119:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+7E1 text4 CODE >120:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+7EB text4 CODE >121:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+7ED text4 CODE >122:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+7F1 text4 CODE >125:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
 72F text3 CODE >5:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
 72F text3 CODE >13:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
 730 text3 CODE >14:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
@@ -247,51 +248,51 @@ $dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 787 text3 CODE >39:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
 789 text3 CODE >40:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
 78D text3 CODE >41:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
-683 text2 CODE >5:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
-683 text2 CODE >12:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
-684 text2 CODE >13:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
-688 text2 CODE >14:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
-68B text2 CODE >14:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
-68D text2 CODE >15:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
-68F text2 CODE >17:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
-693 text2 CODE >18:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
-696 text2 CODE >18:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
-698 text2 CODE >19:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
-69E text2 CODE >20:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
-6A0 text2 CODE >21:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
-6A1 text2 CODE >22:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
-6A6 text2 CODE >23:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
-6AA text2 CODE >21:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
-6AE text2 CODE >26:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
-6B0 text2 CODE >26:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
-6B4 text2 CODE >26:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
-6B8 text2 CODE >27:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
-6BC text2 CODE >28:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
-6C1 text2 CODE >29:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
-6C7 text2 CODE >31:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
-6CC text2 CODE >32:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
-6CF text2 CODE >32:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
-6D1 text2 CODE >33:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
-6D5 text2 CODE >34:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
-63E text1 CODE >48:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-63E text1 CODE >49:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-64F text1 CODE >50:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-660 text1 CODE >51:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-671 text1 CODE >52:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-682 text1 CODE >53:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-6D6 maintext CODE >118:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-6D6 maintext CODE >119:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-6D9 maintext CODE >122:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-6DA maintext CODE >125:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-6DB maintext CODE >128:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-6E2 maintext CODE >131:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-6E9 maintext CODE >133:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-6E9 maintext CODE >134:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-6EC maintext CODE >135:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-6EF maintext CODE >138:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-6FF maintext CODE >139:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-70E maintext CODE >140:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-71D maintext CODE >141:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+6DC text2 CODE >5:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+6DC text2 CODE >12:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+6DD text2 CODE >13:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+6E1 text2 CODE >14:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+6E4 text2 CODE >14:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+6E6 text2 CODE >15:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+6E8 text2 CODE >17:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+6EC text2 CODE >18:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+6EF text2 CODE >18:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+6F1 text2 CODE >19:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+6F7 text2 CODE >20:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+6F9 text2 CODE >21:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+6FA text2 CODE >22:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+6FF text2 CODE >23:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+703 text2 CODE >21:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+707 text2 CODE >26:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+709 text2 CODE >26:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+70D text2 CODE >26:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+711 text2 CODE >27:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+715 text2 CODE >28:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+71A text2 CODE >29:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+720 text2 CODE >31:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+725 text2 CODE >32:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+728 text2 CODE >32:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+72A text2 CODE >33:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+72E text2 CODE >34:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+646 text1 CODE >61:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+646 text1 CODE >62:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+657 text1 CODE >63:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+668 text1 CODE >64:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+679 text1 CODE >65:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+68A text1 CODE >66:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+68B maintext CODE >131:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+68B maintext CODE >132:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+68E maintext CODE >135:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+68F maintext CODE >138:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+690 maintext CODE >141:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+697 maintext CODE >144:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+69E maintext CODE >146:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+69E maintext CODE >147:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+6A1 maintext CODE >148:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+6A4 maintext CODE >151:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+6B2 maintext CODE >152:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+6BF maintext CODE >153:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+6CC maintext CODE >154:D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -306,15 +307,15 @@ $dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 %SYMTAB
 ___latbits 3 0 ABS 0 - dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 ___awdiv@counter 75 0 COMMON 1 cstackCOMMON dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-__end_of_Timer0_Write BC6 0 CODE 0 text5 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-__Hspace_0 80C 0 ABS 0 - -
+__end_of_Timer0_Write BD6 0 CODE 0 text5 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+__Hspace_0 816 0 ABS 0 - -
 __Hspace_1 7E 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 10010 0 ABS 0 - -
 Timer0_OverflowCallbackRegister@CallbackHandler 70 0 COMMON 1 cstackCOMMON dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-__end_of_INTERRUPT_Initialize C00 0 CODE 0 text10 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+__end_of_INTERRUPT_Initialize C10 0 CODE 0 text10 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 __L__absolute__ 0 0 ABS 0 __absolute__ -
 __Hstrings 0 0 ABS 0 strings -
 _LATA 10C 0 ABS 0 - dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
@@ -323,27 +324,28 @@ _LATC 10E 0 ABS 0 - dist/default/debug\Test-for-Digital-Timer-ButtonControlled.d
 _TMR0 15 0 ABS 0 - dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 _WPUB 20D 0 ABS 0 - dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 _WPUE 210 0 ABS 0 - dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-___sp 0 0 STACK 2 stack C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_12.o
-_main DAC 0 CODE 0 maintext dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+___sp 0 0 STACK 2 stack C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_12.o
+_main D16 0 CODE 0 maintext dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 btemp 7E 0 ABS 0 - dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-___stack_hi 0 0 STACK 2 stack C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_12.o
-___stack_lo 0 0 STACK 2 stack C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_12.o
-start 4 0 CODE 0 init C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_12.o
+___stack_hi 0 0 STACK 2 stack C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_12.o
+___stack_lo 0 0 STACK 2 stack C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_12.o
+start 4 0 CODE 0 init C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_12.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OPTION_REGbits 95 0 ABS 0 - dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+__end_of_SEGMENT_MAP 102C 0 STRCODE 0 stringtext2 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 __Hpowerup 0 0 CODE 0 powerup -
 ___awmod@sign 76 0 COMMON 1 cstackCOMMON dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 __end_of_Timer0 1018 0 STRCODE 0 stringtext1 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_12.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_12.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_12.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_12.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_12.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_12.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_12.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_12.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_12.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_12.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_12.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_12.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 wtemp0 7E 0 ABS 0 - dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 __Hfunctab 0 0 ENTRY 0 functab -
-_update_display C7C 0 CODE 0 text1 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+_update_display C8C 0 CODE 0 text1 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 ___awdiv@sign 76 0 COMMON 1 cstackCOMMON dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 __Hclrtext 0 0 ABS 0 clrtext -
 _ANSELA 18C 0 ABS 0 - dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
@@ -356,19 +358,19 @@ _Timer0_OverflowCallback 0 0 ABS 0 - dist/default/debug\Test-for-Digital-Timer-B
 __LnvBANK0 0 0 ABS 0 nvBANK0 -
 ___awdiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 __end_of___awdiv F1C 0 CODE 0 text3 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-__end_of___awmod DAC 0 CODE 0 text2 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+__end_of___awmod E5E 0 CODE 0 text2 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 _OPTION_REG 95 0 ABS 0 - dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-___stackhi 0 0 ABS 0 - C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_12.o
-___stacklo 0 0 ABS 0 - C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_12.o
-__end_of_update_display D06 0 CODE 0 text1 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-_PIN_MANAGER_Initialize C40 0 CODE 0 text9 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+___stackhi 0 0 ABS 0 - C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_12.o
+___stacklo 0 0 ABS 0 - C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_12.o
+__end_of_update_display D16 0 CODE 0 text1 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+_PIN_MANAGER_Initialize C50 0 CODE 0 text9 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 start_initialization FE4 0 CODE 0 cinit dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 _OSCCON 99 0 ABS 0 - dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-__end_of_SYSTEM_Initialize C1A 0 CODE 0 text6 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+__end_of_SYSTEM_Initialize C2A 0 CODE 0 text6 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 _handle_buttons F1C 0 CODE 0 text4 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 _timer_running 7C 0 COMMON 1 bssCOMMON dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-___int_sp 0 0 STACK 2 stack C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_12.o
-__end_of_Timer0_OverflowCallbackRegister BEA 0 CODE 0 text8 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+___int_sp 0 0 STACK 2 stack C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_12.o
+__end_of_Timer0_OverflowCallbackRegister BFA 0 CODE 0 text8 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -466,7 +468,7 @@ __Lsfr31 0 0 ABS 0 sfr31 -
 __Lstack 0 0 STACK 2 stack -
 _PORTAbits C 0 ABS 0 - dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 _INTCONbits B 0 ABS 0 - dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-_INTERRUPT_Initialize BEA 0 CODE 0 text10 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+_INTERRUPT_Initialize BFA 0 CODE 0 text10 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
 __Hheap 0 0 HEAP 7 heap -
@@ -500,30 +502,32 @@ __Lsfr9 0 0 ABS 0 sfr9 -
 __Lsivt 4 0 CODE 0 sivt -
 __Ltext 0 0 ABS 0 text -
 __pstringtext1 1000 0 STRCODE 0 stringtext1 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+__pstringtext2 1018 0 STRCODE 0 stringtext2 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 __pnvBANK0 28 0 BANK0 1 nvBANK0 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __end_of_handle_buttons FE4 0 CODE 0 text4 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-__S0 80C 0 ABS 0 - -
+__S0 816 0 ABS 0 - -
 __S1 7E 0 ABS 0 - -
-_CLOCK_Initialize BC6 0 CODE 0 text12 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-_SYSTEM_Initialize C00 0 CODE 0 text6 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+_CLOCK_Initialize BD6 0 CODE 0 text12 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+_SYSTEM_Initialize C10 0 CODE 0 text6 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 __HnvBANK0 0 0 ABS 0 nvBANK0 -
 __Lintentry 4 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_12.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_12.o
 Timer0_Write@timerVal 70 0 COMMON 1 cstackCOMMON dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 __Lstringtext1 0 0 ABS 0 stringtext1 -
+__Lstringtext2 0 0 ABS 0 stringtext2 -
 _INT_InterruptHandler 2A 0 BANK0 1 nvBANK0 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 ___awmod@counter 75 0 COMMON 1 cstackCOMMON dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 _Timer0_OverflowCallback@tmr0$F279 28 0 BANK0 1 nvBANK0 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-__ptext10 BEA 0 CODE 0 text10 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-__ptext11 BD2 0 CODE 0 text11 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-__ptext12 BC6 0 CODE 0 text12 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+__ptext10 BFA 0 CODE 0 text10 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+__ptext11 BE2 0 CODE 0 text11 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+__ptext12 BD6 0 CODE 0 text12 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 _Timer0_DefaultOverflowCallback 0 0 ABS 0 - dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-__end_of_Timer0_Initialize C40 0 CODE 0 text7 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-__end_of_PIN_MANAGER_Initialize C7C 0 CODE 0 text9 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+__end_of_Timer0_Initialize C50 0 CODE 0 text7 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+__end_of_PIN_MANAGER_Initialize C8C 0 CODE 0 text9 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 ___awdiv E5E 0 CODE 0 text3 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-___awmod D06 0 CODE 0 text2 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+___awmod DB8 0 CODE 0 text2 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 __Lbank10 0 0 ABS 0 bank10 -
 __Lbank11 0 0 ABS 0 bank11 -
 __Lbank12 0 0 ABS 0 bank12 -
@@ -546,12 +550,12 @@ __Lbank28 0 0 BANK28 1 bank28 -
 __Lbank29 0 0 BANK29 1 bank29 -
 __Lbank30 0 0 BANK30 1 bank30 -
 __Lbank31 0 0 BANK31 1 bank31 -
-__pmaintext DAC 0 CODE 0 maintext dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+__pmaintext D16 0 CODE 0 maintext dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 __Lbigram 0 0 ABS 0 bigram -
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
 _LATBbits 10D 0 ABS 0 - dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-__end_of_CLOCK_Initialize BD2 0 CODE 0 text12 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+__end_of_CLOCK_Initialize BE2 0 CODE 0 text12 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 _seconds 26 0 BANK0 1 bssBANK0 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
@@ -568,39 +572,40 @@ ___awdiv@quotient 77 0 COMMON 1 cstackCOMMON dist/default/debug\Test-for-Digital
 ?___awdiv 70 0 COMMON 1 cstackCOMMON dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 ?___awmod 70 0 COMMON 1 cstackCOMMON dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 __Hreset_vec 4 0 CODE 0 reset_vec -
-_INT_SetInterruptHandler BD2 0 CODE 0 text11 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+_INT_SetInterruptHandler BE2 0 CODE 0 text11 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
 ___awmod@dividend 72 0 COMMON 1 cstackCOMMON dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-__end_of_INT_SetInterruptHandler BDE 0 CODE 0 text11 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-__ptext1 C7C 0 CODE 0 text1 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-__ptext2 D06 0 CODE 0 text2 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+__end_of_INT_SetInterruptHandler BEE 0 CODE 0 text11 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+__ptext1 C8C 0 CODE 0 text1 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+__ptext2 DB8 0 CODE 0 text2 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 __ptext3 E5E 0 CODE 0 text3 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 __ptext4 F1C 0 CODE 0 text4 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-__ptext5 BBE 0 CODE 0 text5 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-__ptext6 C00 0 CODE 0 text6 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-__ptext7 C1A 0 CODE 0 text7 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-__ptext8 BDE 0 CODE 0 text8 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-__ptext9 C40 0 CODE 0 text9 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-_Timer0_OverflowCallbackRegister BDE 0 CODE 0 text8 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-_Timer0_Initialize C1A 0 CODE 0 text7 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+__ptext5 BCE 0 CODE 0 text5 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+__ptext6 C10 0 CODE 0 text6 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+__ptext7 C2A 0 CODE 0 text7 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+__ptext8 BEE 0 CODE 0 text8 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+__ptext9 C50 0 CODE 0 text9 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+_Timer0_OverflowCallbackRegister BEE 0 CODE 0 text8 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+_Timer0_Initialize C2A 0 CODE 0 text7 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __H__absolute__ 0 0 ABS 0 __absolute__ -
 __Lreset_vec 0 0 CODE 0 reset_vec -
 __Hstringtext1 0 0 ABS 0 stringtext1 -
-___heap_hi 0 0 ABS 0 - C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_12.o
-___heap_lo 0 0 ABS 0 - C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_12.o
+__Hstringtext2 0 0 ABS 0 stringtext2 -
+___heap_hi 0 0 ABS 0 - C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_12.o
+___heap_lo 0 0 ABS 0 - C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_12.o
 __end_of__initialization FFA 0 CODE 0 cinit dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 ___awmod@divisor 70 0 COMMON 1 cstackCOMMON dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 __Lfunctab 0 0 ENTRY 0 functab -
 _timer0ReloadVal 27 0 BANK0 1 bssBANK0 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 _Timer0_Tasks 0 0 ABS 0 - dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-_Timer0_Write BBE 0 CODE 0 text5 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+_Timer0_Write BCE 0 CODE 0 text5 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 __Lclrtext 0 0 ABS 0 clrtext -
 INT_SetInterruptHandler@InterruptHandler 70 0 COMMON 1 cstackCOMMON dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 __Hend_init 8 0 CODE 0 end_init -
-__end_of_main E5E 0 CODE 0 maintext dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
+__end_of_main DB8 0 CODE 0 maintext dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 _IOCBF 396 0 ABS 0 - dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 _IOCBN 395 0 ABS 0 - dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 _IOCBP 394 0 ABS 0 - dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
@@ -615,8 +620,8 @@ _digit 20 0 BANK0 1 bssBANK0 dist/default/debug\Test-for-Digital-Timer-ButtonCon
 __initialization FE4 0 CODE 0 cinit dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 __pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
 Timer0_OverflowCallback@ms_count 24 0 BANK0 1 bssBANK0 dist/default/debug\Test-for-Digital-Timer-ButtonControlled.debug.o
-___int_stack_hi 0 0 STACK 2 stack C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_12.o
-___int_stack_lo 0 0 STACK 2 stack C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.\driver_tmp_12.o
+___int_stack_hi 0 0 STACK 2 stack C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_12.o
+___int_stack_lo 0 0 STACK 2 stack C:\Users\NAZARB~1\AppData\Local\Temp\xcAsr6k.\driver_tmp_12.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -643,21 +648,21 @@ ___int_stack_lo 0 0 STACK 2 stack C:\Users\NAZARB~1\AppData\Local\Temp\xcAs13as.
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cinit 0 7F2 FE4 E 2
-text1 0 63E C7C 45 2
-text2 0 683 D06 53 2
+text1 0 646 C8C 45 2
+text2 0 6DC DB8 53 2
 text3 0 72F E5E 5F 2
 text4 0 78E F1C 64 2
-text5 0 5DF BBE 4 2
-text6 0 600 C00 D 2
-text7 0 60D C1A 13 2
-text8 0 5EF BDE 6 2
-text9 0 620 C40 1E 2
-text10 0 5F5 BEA B 2
-text11 0 5E9 BD2 6 2
-text12 0 5E3 BC6 6 2
-maintext 0 6D6 DAC 59 2
+text5 0 5E7 BCE 4 2
+text6 0 608 C10 D 2
+text7 0 615 C2A 13 2
+text8 0 5F7 BEE 6 2
+text9 0 628 C50 1E 2
+text10 0 5FD BFA B 2
+text11 0 5F1 BE2 6 2
+text12 0 5EB BD6 6 2
+maintext 0 68B D16 51 2
 cstackCOMMON 1 70 70 E 1
-stringtext1 0 800 1000 C 2
+stringtext1 0 800 1000 16 2
 reset_vec 0 0 0 4 2
 bssBANK0 1 20 20 C 1
 # %NOTES Section

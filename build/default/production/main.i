@@ -3125,21 +3125,42 @@ void SYSTEM_Initialize(void);
 
 
 
+const uint8_t SEGMENT_MAP[10] = {
+    0b11000000,
+    0b11111001,
+    0b10100100,
+    0b10110000,
+    0b10011001,
+    0b10010010,
+    0b10000010,
+    0b11111000,
+    0b10000000,
+    0b10010000
+};
 
-unsigned char seconds = 0;
-unsigned char minutes = 0;
-unsigned char digit[4];
+
+uint8_t minutes = 0;
+uint8_t seconds = 0;
+uint8_t digit[4];
 _Bool timer_running = 0;
 
 
 
 
 
-void update_display() {
+void displayDigits(uint8_t minutes, uint8_t seconds) {
+    uint8_t digit[4];
     digit[0] = minutes / 10;
     digit[1] = minutes % 10;
     digit[2] = seconds / 10;
     digit[3] = seconds % 10;
+
+    for (int i = 0; i < 4; i++) {
+        LATC = SEGMENT_MAP[digit[i]];
+        LATB = (1 << i);
+        _delay((unsigned long)((1)*(20000000/4000.0)));
+        LATB = 0;
+    }
 }
 
 
@@ -3147,7 +3168,7 @@ void Timer0_OverflowCallback(void) {
     static unsigned int ms_count = 0;
 
 
-    Timer0_Write(120);
+
 
     if (timer_running) {
         ms_count++;
@@ -3168,40 +3189,6 @@ void Timer0_OverflowCallback(void) {
 }
 
 
-void handle_buttons(void) {
-    if (PORTAbits.RA0 == 0 && !timer_running) {
-        _delay((unsigned long)((20)*(20000000/4000.0)));
-        if (PORTAbits.RA0 == 0) {
-            minutes++;
-            if (minutes >= 60) {
-                minutes = 0;
-            }
-            while (PORTAbits.RA0 == 0);
-        }
-    }
-
-    if (PORTAbits.RA1 == 0 && !timer_running) {
-        _delay((unsigned long)((20)*(20000000/4000.0)));
-        if (PORTAbits.RA1 == 0) {
-            if (minutes == 0) {
-                minutes = 59;
-            } else {
-                minutes--;
-            }
-            while (PORTAbits.RA1 == 0);
-        }
-    }
-
-    if (PORTAbits.RA2 == 0) {
-        _delay((unsigned long)((20)*(20000000/4000.0)));
-        if (PORTAbits.RA2 == 0 && !timer_running) {
-            timer_running = 1;
-            while (PORTAbits.RA2 == 0);
-        }
-    }
-}
-
-
 
 
 
@@ -3215,19 +3202,37 @@ int main(void) {
     (INTCONbits.PEIE = 1);
 
 
-    Timer0_Write(120);
-
-
     Timer0_OverflowCallbackRegister(Timer0_OverflowCallback);
 
     while(1) {
-        update_display();
-        handle_buttons();
+        if (PORTAbits.RA0 == 0 && !timer_running) {
+            _delay((unsigned long)((20)*(20000000/4000.0)));
+            if (PORTAbits.RA0 == 0) {
+                minutes++;
+                if (minutes > 99) {
+                    minutes = 99;
+                }
+            }
+        }
+
+        if (PORTAbits.RA1 == 0 && !timer_running) {
+            _delay((unsigned long)((20)*(20000000/4000.0)));
+            if (PORTAbits.RA1 == 0) {
+                if (minutes > 0) {
+                    minutes--;
+                }
+            }
+        }
+
+        if (PORTAbits.RA2 == 0) {
+            _delay((unsigned long)((20)*(20000000/4000.0)));
+            if (PORTAbits.RA2 == 0 && !timer_running) {
+                timer_running = 1;
+                while (PORTAbits.RA2 == 0);
+            }
+        }
 
 
-        LATBbits.LATB0 = 1; LATC = digit[0]; _delay((unsigned long)((1)*(20000000/4000.0))); LATBbits.LATB0 = 0;
-        LATBbits.LATB1 = 1; LATC = digit[1]; _delay((unsigned long)((1)*(20000000/4000.0))); LATBbits.LATB1 = 0;
-        LATBbits.LATB2 = 1; LATC = digit[2]; _delay((unsigned long)((1)*(20000000/4000.0))); LATBbits.LATB2 = 0;
-        LATBbits.LATB3 = 1; LATC = digit[3]; _delay((unsigned long)((1)*(20000000/4000.0))); LATBbits.LATB3 = 0;
+        displayDigits(minutes, seconds);
     }
 }

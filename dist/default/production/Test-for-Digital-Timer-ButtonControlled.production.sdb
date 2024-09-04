@@ -11,13 +11,11 @@
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"48 D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-[v _update_display update_display `(v  1 e 1 0 ]
-"56
+"61 D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+[v _displayDigits displayDigits `(v  1 e 1 0 ]
+"77
 [v _Timer0_OverflowCallback Timer0_OverflowCallback `(v  1 e 1 0 ]
-"81
-[v _handle_buttons handle_buttons `(v  1 e 1 0 ]
-"118
+"105
 [v _main main `(i  1 e 2 0 ]
 "39 D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/clock.c
 [v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
@@ -60,7 +58,7 @@
 ]
 [u S100 . 1 `S86 1 . 1 0 `S95 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES100  1 e 1 @11 ]
-[s S294 . 1 `uc 1 RA0 1 0 :1:0 
+[s S322 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
 `uc 1 RA3 1 0 :1:3 
@@ -70,8 +68,8 @@
 `uc 1 RA7 1 0 :1:7 
 ]
 "446
-[u S303 . 1 `S294 1 . 1 0 ]
-[v _PORTAbits PORTAbits `VES303  1 e 1 @12 ]
+[u S331 . 1 `S322 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES331  1 e 1 @12 ]
 "732
 [v _TMR0 TMR0 `VEuc  1 e 1 @21 ]
 "1052
@@ -107,18 +105,6 @@
 [v _LATA LATA `VEuc  1 e 1 @268 ]
 "1916
 [v _LATB LATB `VEuc  1 e 1 @269 ]
-[s S342 . 1 `uc 1 LATB0 1 0 :1:0 
-`uc 1 LATB1 1 0 :1:1 
-`uc 1 LATB2 1 0 :1:2 
-`uc 1 LATB3 1 0 :1:3 
-`uc 1 LATB4 1 0 :1:4 
-`uc 1 LATB5 1 0 :1:5 
-`uc 1 LATB6 1 0 :1:6 
-`uc 1 LATB7 1 0 :1:7 
-]
-"1933
-[u S351 . 1 `S342 1 . 1 0 ]
-[v _LATBbits LATBbits `VES351  1 e 1 @269 ]
 "1978
 [v _LATC LATC `VEuc  1 e 1 @270 ]
 "2040
@@ -139,13 +125,13 @@
 [v _IOCBN IOCBN `VEuc  1 e 1 @917 ]
 "3974
 [v _IOCBF IOCBF `VEuc  1 e 1 @918 ]
-"39 D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-[v _seconds seconds `uc  1 e 1 0 ]
-"40
+"38 D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+[v _SEGMENT_MAP SEGMENT_MAP `DC[10]uc  1 e 10 0 ]
+"52
 [v _minutes minutes `uc  1 e 1 0 ]
-"41
-[v _digit digit `[4]uc  1 e 4 0 ]
-"42
+"53
+[v _seconds seconds `uc  1 e 1 0 ]
+"55
 [v _timer_running timer_running `a  1 e 1 0 ]
 "38 D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/interrupt.c
 [v _INT_InterruptHandler INT_InterruptHandler `*.37(v  1 e 2 0 ]
@@ -153,15 +139,25 @@
 [v _timer0ReloadVal timer0ReloadVal `VEuc  1 e 1 0 ]
 "47
 [v _Timer0_OverflowCallback@tmr0$F279 Timer0_OverflowCallback `*.37(v  1 s 2 Timer0_OverflowCallback ]
-"118 D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+"105 D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"143
+"148
 } 0
-"48
-[v _update_display update_display `(v  1 e 1 0 ]
+"61
+[v _displayDigits displayDigits `(v  1 e 1 0 ]
 {
-"53
+[v displayDigits@minutes minutes `uc  1 a 1 wreg ]
+"68
+[v displayDigits@i i `i  1 a 2 5 ]
+"62
+[v displayDigits@digit digit `[4]uc  1 a 4 0 ]
+"61
+[v displayDigits@minutes minutes `uc  1 a 1 wreg ]
+[v displayDigits@seconds seconds `uc  1 p 1 9 ]
+"63
+[v displayDigits@minutes minutes `uc  1 a 1 4 ]
+"74
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
@@ -186,17 +182,6 @@
 [v ___awdiv@divisor divisor `i  1 p 2 0 ]
 [v ___awdiv@dividend dividend `i  1 p 2 2 ]
 "41
-} 0
-"81 D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
-[v _handle_buttons handle_buttons `(v  1 e 1 0 ]
-{
-"112
-} 0
-"77 D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/timer/src/tmr0.c
-[v _Timer0_Write Timer0_Write `(v  1 e 1 0 ]
-{
-[v Timer0_Write@timerVal timerVal `ui  1 p 2 0 ]
-"81
 } 0
 "39 D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/system.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
