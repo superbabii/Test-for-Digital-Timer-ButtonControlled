@@ -2,7 +2,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "39 mcc_generated_files/system/src/config_bits.c
 [p x FOSC  =  INTOSC     ]
 "40
-[p x WDTE  =  OFF     ]
+[p x WDTE  =  SWDTEN     ]
 "41
 [p x PWRTE  =  OFF     ]
 "42

@@ -425,8 +425,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/system/src/pins.c: 45:     LATC = 0x0;
 [e = _LATC -> -> 0 `i `uc ]
 "50
-[; ;mcc_generated_files/system/src/pins.c: 50:     TRISA = 0xEF;
-[e = _TRISA -> -> 239 `i `uc ]
+[; ;mcc_generated_files/system/src/pins.c: 50:     TRISA = 0xDF;
+[e = _TRISA -> -> 223 `i `uc ]
 "51
 [; ;mcc_generated_files/system/src/pins.c: 51:     TRISB = 0xF0;
 [e = _TRISB -> -> 240 `i `uc ]
@@ -437,8 +437,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/system/src/pins.c: 53:     TRISE = 0x8;
 [e = _TRISE -> -> 8 `i `uc ]
 "58
-[; ;mcc_generated_files/system/src/pins.c: 58:     ANSELA = 0x28;
-[e = _ANSELA -> -> 40 `i `uc ]
+[; ;mcc_generated_files/system/src/pins.c: 58:     ANSELA = 0x8;
+[e = _ANSELA -> -> 8 `i `uc ]
 "59
 [; ;mcc_generated_files/system/src/pins.c: 59:     ANSELB = 0x30;
 [e = _ANSELB -> -> 48 `i `uc ]

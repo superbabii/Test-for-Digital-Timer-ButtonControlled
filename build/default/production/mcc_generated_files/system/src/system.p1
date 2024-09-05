@@ -2,12 +2,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "50 mcc_generated_files/system/src/../../system/clock.h
 [; ;mcc_generated_files/system/src/../../system/clock.h: 50: void CLOCK_Initialize(void);
 [v _CLOCK_Initialize `(v ~T0 @X0 0 ef ]
-"362 mcc_generated_files/system/src/../../system/pins.h
-[; ;mcc_generated_files/system/src/../../system/pins.h: 362: void PIN_MANAGER_Initialize (void);
+"381 mcc_generated_files/system/src/../../system/pins.h
+[; ;mcc_generated_files/system/src/../../system/pins.h: 381: void PIN_MANAGER_Initialize (void);
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
 "55 mcc_generated_files/system/src/../../timer/tmr0.h
 [; ;mcc_generated_files/system/src/../../timer/tmr0.h: 55: void Timer0_Initialize(void);
 [v _Timer0_Initialize `(v ~T0 @X0 0 ef ]
+"52 mcc_generated_files/system/src/../../system/watchdog.h
+[; ;mcc_generated_files/system/src/../../system/watchdog.h: 52: void WDT_Initialize(void);
+[v _WDT_Initialize `(v ~T0 @X0 0 ef ]
 "85 mcc_generated_files/system/src/../../system/interrupt.h
 [; ;mcc_generated_files/system/src/../../system/interrupt.h: 85: void INTERRUPT_Initialize (void);
 [v _INTERRUPT_Initialize `(v ~T0 @X0 0 ef ]
@@ -362,9 +365,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/system/src/system.c: 43:     Timer0_Initialize();
 [e ( _Timer0_Initialize ..  ]
 "44
-[; ;mcc_generated_files/system/src/system.c: 44:     INTERRUPT_Initialize();
-[e ( _INTERRUPT_Initialize ..  ]
+[; ;mcc_generated_files/system/src/system.c: 44:     WDT_Initialize();
+[e ( _WDT_Initialize ..  ]
 "45
-[; ;mcc_generated_files/system/src/system.c: 45: }
+[; ;mcc_generated_files/system/src/system.c: 45:     INTERRUPT_Initialize();
+[e ( _INTERRUPT_Initialize ..  ]
+"46
+[; ;mcc_generated_files/system/src/system.c: 46: }
 [e :UE 238 ]
 }

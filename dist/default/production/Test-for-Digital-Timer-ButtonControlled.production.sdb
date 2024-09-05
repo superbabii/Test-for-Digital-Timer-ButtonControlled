@@ -11,11 +11,15 @@
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"58 D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+"36 D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
 [v _displayDigits displayDigits `(v  1 e 1 0 ]
-"73
+"51
 [v _decreaseTime decreaseTime `(v  1 e 1 0 ]
-"98
+"72
+[v _handleSleepMode handleSleepMode `(v  1 e 1 0 ]
+"86
+[v _controlLED controlLED `(v  1 e 1 0 ]
+"94
 [v _main main `(i  1 e 2 0 ]
 "39 D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/clock.c
 [v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
@@ -31,6 +35,8 @@
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 "39 D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/system.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"36 D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/watchdog.c
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
 "50 D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/timer/src/tmr0.c
 [v _Timer0_Initialize Timer0_Initialize `(v  1 e 1 0 ]
 "77
@@ -41,7 +47,7 @@
 [v _Timer0_DefaultOverflowCallback Timer0_DefaultOverflowCallback `(v  1 s 1 Timer0_DefaultOverflowCallback ]
 "105
 [v _Timer0_Tasks Timer0_Tasks `(v  1 e 1 0 ]
-[s S86 . 1 `uc 1 IOCIF 1 0 :1:0 
+[s S90 . 1 `uc 1 IOCIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 IOCIE 1 0 :1:3 
@@ -51,14 +57,14 @@
 `uc 1 GIE 1 0 :1:7 
 ]
 "374 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc\pic16f1518.h
-[s S95 . 1 `uc 1 . 1 0 :2:0 
+[s S99 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 T0IE 1 0 :1:5 
 ]
-[u S100 . 1 `S86 1 . 1 0 `S95 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES100  1 e 1 @11 ]
-[s S320 . 1 `uc 1 RA0 1 0 :1:0 
+[u S104 . 1 `S90 1 . 1 0 `S99 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES104  1 e 1 @11 ]
+[s S215 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
 `uc 1 RA3 1 0 :1:3 
@@ -68,8 +74,8 @@
 `uc 1 RA7 1 0 :1:7 
 ]
 "446
-[u S329 . 1 `S320 1 . 1 0 ]
-[v _PORTAbits PORTAbits `VES329  1 e 1 @12 ]
+[u S224 . 1 `S215 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES224  1 e 1 @12 ]
 "732
 [v _TMR0 TMR0 `VEuc  1 e 1 @21 ]
 "1052
@@ -82,7 +88,7 @@
 [v _TRISE TRISE `VEuc  1 e 1 @144 ]
 "1341
 [v _OPTION_REG OPTION_REG `VEuc  1 e 1 @149 ]
-[s S51 . 1 `uc 1 PS 1 0 :3:0 
+[s S55 . 1 `uc 1 PS 1 0 :3:0 
 `uc 1 PSA 1 0 :1:3 
 `uc 1 TMR0SE 1 0 :1:4 
 `uc 1 TMR0CS 1 0 :1:5 
@@ -90,20 +96,22 @@
 `uc 1 nWPUEN 1 0 :1:7 
 ]
 "1364
-[s S58 . 1 `uc 1 PS0 1 0 :1:0 
+[s S62 . 1 `uc 1 PS0 1 0 :1:0 
 `uc 1 PS1 1 0 :1:1 
 `uc 1 PS2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
 ]
-[u S65 . 1 `S51 1 . 1 0 `S58 1 . 1 0 ]
-[v _OPTION_REGbits OPTION_REGbits `VES65  1 e 1 @149 ]
+[u S69 . 1 `S55 1 . 1 0 `S62 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES69  1 e 1 @149 ]
+"1481
+[v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
 "1540
 [v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
 "1854
 [v _LATA LATA `VEuc  1 e 1 @268 ]
-[s S341 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S236 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 LATA3 1 0 :1:3 
@@ -113,8 +121,8 @@
 `uc 1 LATA7 1 0 :1:7 
 ]
 "1871
-[u S350 . 1 `S341 1 . 1 0 ]
-[v _LATAbits LATAbits `VES350  1 e 1 @268 ]
+[u S245 . 1 `S236 1 . 1 0 ]
+[v _LATAbits LATAbits `VES245  1 e 1 @268 ]
 "1916
 [v _LATB LATB `VEuc  1 e 1 @269 ]
 "1978
@@ -137,39 +145,46 @@
 [v _IOCBN IOCBN `VEuc  1 e 1 @917 ]
 "3974
 [v _IOCBF IOCBF `VEuc  1 e 1 @918 ]
-"38 D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+"4 D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
 [v _SEGMENT_MAP SEGMENT_MAP `DC[10]uc  1 e 10 0 ]
-"52
+"23
 [v _minutes minutes `uc  1 e 1 0 ]
-"53
+"24
 [v _seconds seconds `uc  1 e 1 0 ]
-"55
+"25
 [v _timer_running timer_running `a  1 e 1 0 ]
+"26
+[v _sleep_mode sleep_mode `a  1 e 1 0 ]
 "38 D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/interrupt.c
 [v _INT_InterruptHandler INT_InterruptHandler `*.37(v  1 e 2 0 ]
 "36 D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/timer/src/tmr0.c
 [v _timer0ReloadVal timer0ReloadVal `VEuc  1 e 1 0 ]
 "47
 [v _Timer0_OverflowCallback Timer0_OverflowCallback `*.37(v  1 s 2 Timer0_OverflowCallback ]
-"98 D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+"94 D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"145
+"140
 } 0
-"58
+"72
+[v _handleSleepMode handleSleepMode `(v  1 e 1 0 ]
+{
+"84
+} 0
+"36
 [v _displayDigits displayDigits `(v  1 e 1 0 ]
 {
 [v displayDigits@minutes minutes `uc  1 a 1 wreg ]
-"65
+"43
 [v displayDigits@i i `i  1 a 2 5 ]
-"59
+"37
 [v displayDigits@digit digit `[4]uc  1 a 4 0 ]
-"58
+"36
 [v displayDigits@minutes minutes `uc  1 a 1 wreg ]
 [v displayDigits@seconds seconds `uc  1 p 1 9 ]
-"60
+"38
 [v displayDigits@minutes minutes `uc  1 a 1 4 ]
-"71
+"49
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
@@ -195,17 +210,27 @@
 [v ___awdiv@dividend dividend `i  1 p 2 2 ]
 "41
 } 0
-"73 D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
+"51 D:\work\Test-for-Digital-Timer-ButtonControlled\main.c
 [v _decreaseTime decreaseTime `(v  1 e 1 0 ]
 {
-"74
+"52
 [v decreaseTime@ms_count ms_count `ui  1 s 2 ms_count ]
-"92
+"70
+} 0
+"86
+[v _controlLED controlLED `(v  1 e 1 0 ]
+{
+"88
 } 0
 "39 D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/system.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
-"45
+"46
+} 0
+"36 D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/system/src/watchdog.c
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+{
+"40
 } 0
 "50 D:\work\Test-for-Digital-Timer-ButtonControlled\mcc_generated_files/timer/src/tmr0.c
 [v _Timer0_Initialize Timer0_Initialize `(v  1 e 1 0 ]

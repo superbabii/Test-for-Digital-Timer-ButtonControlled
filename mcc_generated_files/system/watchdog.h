@@ -1,14 +1,13 @@
 /**
- * Generated Driver File
+ * WDT Generated Driver API Header File
  * 
- * @file pins.c
+ * @file wdt.h
  * 
- * @ingroup  pinsdriver
+ * @defgroup  wdt WDT
  * 
- * @brief This is generated driver implementation for pins. 
- *        This file provides implementations for pin APIs for all pins selected in the GUI.
+ * @brief This file contains the API prototypes for the WDT driver.
  *
- * @version Driver Version 3.0.0
+ * @version WDT Driver Version 2.0.1
 */
 
 /*
@@ -32,74 +31,27 @@
     THIS SOFTWARE.
 */
 
-#include "../pins.h"
+#ifndef WATCHDOG_H
+#define WATCHDOG_H
 
+ /**
+   Section: Included Files
+ */
 
-void PIN_MANAGER_Initialize(void)
-{
-   /**
-    LATx registers
-    */
-    LATA = 0x0;
-    LATB = 0x0;
-    LATC = 0x0;
+#include <xc.h>
+#include <stdbool.h>
+#include <stdint.h>
 
-    /**
-    TRISx registers
-    */
-    TRISA = 0xDF;
-    TRISB = 0xF0;
-    TRISC = 0x0;
-    TRISE = 0x8;
+/**
+ * @ingroup wdt
+ * @brief Initializes the Watchdog Timer (WDT).
+ * @param None.
+ * @return None.
+ * 
+ */
+void WDT_Initialize(void);
 
-    /**
-    ANSELx registers
-    */
-    ANSELA = 0x8;
-    ANSELB = 0x30;
-    ANSELC = 0x0;
-
-    /**
-    WPUx registers
-    */
-    WPUB = 0xFF;
-    WPUE = 0x8;
-    OPTION_REGbits.nWPUEN = 0x0;
-  
-    /**
-    ODx registers
-    */
-   
-    /**
-    SLRCONx registers
-    */
-    /**
-    INLVLx registers
-    */
-
-    /**
-    PPS registers
-    */
-
-    /**
-    APFCON registers
-    */
-
-   /**
-    IOCx registers 
-    */
-    IOCBP = 0x0;
-    IOCBN = 0x0;
-    IOCBF = 0x0;
-
-
-    // Enable INTCONbits.IOCIE interrupt 
-    INTCONbits.IOCIE = 1; 
-}
-  
-void PIN_MANAGER_IOC(void)
-{
-}
+#endif	/* WATCHDOG_H */
 /**
  End of File
 */

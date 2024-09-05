@@ -42,6 +42,7 @@
 #include "config_bits.h"
 #include "../system/pins.h"
 #include "../timer/tmr0.h"
+#include "../system/watchdog.h"
 #include "../system/interrupt.h"
 #include "../system/clock.h"
 

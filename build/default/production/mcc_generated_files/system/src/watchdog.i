@@ -1,4 +1,4 @@
-# 1 "mcc_generated_files/system/src/clock.c"
+# 1 "mcc_generated_files/system/src/watchdog.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,10 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mcc_generated_files/system/src/clock.c" 2
-# 36 "mcc_generated_files/system/src/clock.c"
+# 1 "mcc_generated_files/system/src/watchdog.c" 2
+# 34 "mcc_generated_files/system/src/watchdog.c"
+# 1 "mcc_generated_files/system/src/../watchdog.h" 1
+# 41 "mcc_generated_files/system/src/../watchdog.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -3011,18 +3013,17 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 2 3
-# 36 "mcc_generated_files/system/src/clock.c" 2
+# 41 "mcc_generated_files/system/src/../watchdog.h" 2
 
-# 1 "mcc_generated_files/system/src/../clock.h" 1
-# 50 "mcc_generated_files/system/src/../clock.h"
-void CLOCK_Initialize(void);
-# 37 "mcc_generated_files/system/src/clock.c" 2
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdbool.h" 1 3
+# 42 "mcc_generated_files/system/src/../watchdog.h" 2
+# 52 "mcc_generated_files/system/src/../watchdog.h"
+void WDT_Initialize(void);
+# 34 "mcc_generated_files/system/src/watchdog.c" 2
 
 
-void CLOCK_Initialize(void)
+void WDT_Initialize(void)
 {
-    OSCCON = (15 << 0x3)
-        | (0 << 0x0);
-    BORCON = (0 << 0x7)
-        | (0 << 0x6);
+
+    WDTCON = 0x13;
 }

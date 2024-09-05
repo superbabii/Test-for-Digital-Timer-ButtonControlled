@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: Test
-creation_date: 2024-09-04T17:45:10.815+03:00[Europe/Helsinki]
+creation_date: 2024-09-05T14:08:02.126+03:00[Europe/Helsinki]
 operating_system: Windows 10
 mcc_mode: IDE
 mcc_mode_version: v6.20
@@ -25,3 +25,4 @@ modules:
 - {name: '@mchp-mcc/scf-pic8-interrupt-v3', type: MELODY, version: 1.0.2}
 - {name: '@mchp-mcc/scf-pic8-osc-v7', type: MELODY, version: 1.0.2}
 - {name: '@mchp-mcc/scf-pic8-tmr0-v2', type: MELODY, version: 2.0.0}
+- {name: '@mchp-mcc/scf-pic8-wdt-v1', type: MELODY, version: 5.0.5}

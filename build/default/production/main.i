@@ -7,7 +7,6 @@
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "main.c" 2
-# 35 "main.c"
 # 1 "./mcc_generated_files/system/system.h" 1
 # 39 "./mcc_generated_files/system/system.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 1 3
@@ -3028,7 +3027,7 @@ void CLOCK_Initialize(void);
 # 42 "./mcc_generated_files/system/system.h" 2
 
 # 1 "./mcc_generated_files/system/../system/pins.h" 1
-# 362 "./mcc_generated_files/system/../system/pins.h"
+# 381 "./mcc_generated_files/system/../system/pins.h"
 void PIN_MANAGER_Initialize (void);
 
 
@@ -3105,6 +3104,11 @@ void Timer0_PeriodCountSet(size_t periodVal);
 void Timer0_Tasks(void);
 # 44 "./mcc_generated_files/system/system.h" 2
 
+# 1 "./mcc_generated_files/system/../system/watchdog.h" 1
+# 52 "./mcc_generated_files/system/../system/watchdog.h"
+void WDT_Initialize(void);
+# 45 "./mcc_generated_files/system/system.h" 2
+
 # 1 "./mcc_generated_files/system/../system/interrupt.h" 1
 # 85 "./mcc_generated_files/system/../system/interrupt.h"
 void INTERRUPT_Initialize (void);
@@ -3118,10 +3122,10 @@ void INT_SetInterruptHandler(void (* InterruptHandler)(void));
 extern void (*INT_InterruptHandler)(void);
 # 175 "./mcc_generated_files/system/../system/interrupt.h"
 void INT_DefaultInterruptHandler(void);
-# 45 "./mcc_generated_files/system/system.h" 2
-# 55 "./mcc_generated_files/system/system.h"
+# 46 "./mcc_generated_files/system/system.h" 2
+# 56 "./mcc_generated_files/system/system.h"
 void SYSTEM_Initialize(void);
-# 35 "main.c" 2
+# 1 "main.c" 2
 
 
 
@@ -3139,11 +3143,23 @@ const uint8_t SEGMENT_MAP[10] = {
 };
 
 
+
+
+
+
+
 uint8_t minutes = 0;
 uint8_t seconds = 0;
-uint8_t digit[4];
 _Bool timer_running = 0;
+_Bool sleep_mode = 0;
 
+
+void displayDigits(uint8_t minutes, uint8_t seconds);
+void decreaseTime(void);
+void handleSleepMode(void);
+void checkButtons(void);
+void controlLED(void);
+_Bool debounceButton(uint8_t portPin);
 
 void displayDigits(uint8_t minutes, uint8_t seconds) {
     uint8_t digit[4];
@@ -3154,7 +3170,7 @@ void displayDigits(uint8_t minutes, uint8_t seconds) {
 
     for (int i = 0; i < 4; i++) {
         LATC = SEGMENT_MAP[digit[i]];
-        LATB = (1 << i);
+        LATB = (unsigned char)(1 << i);
         _delay((unsigned long)((1)*(4000000/4000.0)));
         LATB = 0;
     }
@@ -3181,6 +3197,24 @@ void decreaseTime(void) {
     }
 }
 
+void handleSleepMode(void) {
+    if (PORTAbits.RA4 == 0) {
+
+        LATAbits.LATA5 = 0;
+        __asm("sleep");
+        sleep_mode = 1;
+    } else {
+        __asm("clrwdt");
+        sleep_mode = 0;
+        if(timer_running)
+            LATAbits.LATA5 = 1;
+    }
+}
+
+void controlLED(void) {
+    LATAbits.LATA5 = timer_running ? 1 : 0;
+}
+
 
 
 
@@ -3195,6 +3229,8 @@ int main(void) {
     (INTCONbits.PEIE = 1);
 
     while(1) {
+        handleSleepMode();
+
         if (PORTAbits.RA0 == 0 && !timer_running) {
             _delay((unsigned long)((100)*(4000000/4000.0)));
             if (PORTAbits.RA0 == 0) {
@@ -3222,14 +3258,11 @@ int main(void) {
             }
         }
 
-
-        if(timer_running)
-            LATAbits.LATA4 = 1;
-        else
-            LATAbits.LATA4 = 0;
+        controlLED();
 
 
         decreaseTime();
-        displayDigits(minutes, seconds);
+        if(sleep_mode == 0)
+            displayDigits(minutes, seconds);
     }
 }

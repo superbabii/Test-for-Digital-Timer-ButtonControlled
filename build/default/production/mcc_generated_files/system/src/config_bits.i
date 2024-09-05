@@ -9,7 +9,7 @@
 # 1 "mcc_generated_files/system/src/config_bits.c" 2
 # 39 "mcc_generated_files/system/src/config_bits.c"
 #pragma config FOSC = INTOSC
-#pragma config WDTE = OFF
+#pragma config WDTE = SWDTEN
 #pragma config PWRTE = OFF
 #pragma config MCLRE = ON
 #pragma config CP = OFF

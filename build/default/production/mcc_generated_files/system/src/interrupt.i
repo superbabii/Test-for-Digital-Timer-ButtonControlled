@@ -3043,7 +3043,7 @@ void CLOCK_Initialize(void);
 # 42 "mcc_generated_files/system/src/../../system/system.h" 2
 
 # 1 "mcc_generated_files/system/src/../../system/../system/pins.h" 1
-# 362 "mcc_generated_files/system/src/../../system/../system/pins.h"
+# 381 "mcc_generated_files/system/src/../../system/../system/pins.h"
 void PIN_MANAGER_Initialize (void);
 
 
@@ -3119,7 +3119,12 @@ void Timer0_PeriodCountSet(size_t periodVal);
 
 void Timer0_Tasks(void);
 # 44 "mcc_generated_files/system/src/../../system/system.h" 2
-# 55 "mcc_generated_files/system/src/../../system/system.h"
+
+# 1 "mcc_generated_files/system/src/../../system/../system/watchdog.h" 1
+# 52 "mcc_generated_files/system/src/../../system/../system/watchdog.h"
+void WDT_Initialize(void);
+# 45 "mcc_generated_files/system/src/../../system/system.h" 2
+# 56 "mcc_generated_files/system/src/../../system/system.h"
 void SYSTEM_Initialize(void);
 # 35 "mcc_generated_files/system/src/interrupt.c" 2
 
